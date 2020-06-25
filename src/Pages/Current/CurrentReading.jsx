@@ -40,7 +40,6 @@ class CurrentReading extends React.Component {
       </div>
     ) : (
       <div className="CurrentReading">
-        Current
         <div>{this.renderLatestReading()}</div>
       </div>
     );
