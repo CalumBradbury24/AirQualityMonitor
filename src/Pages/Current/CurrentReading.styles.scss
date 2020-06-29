@@ -1,18 +1,51 @@
 .CurrentReading{
-    width: 75%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin: 10px auto 0;
 }
-
+.loading{
+    padding-top: 150px;
+}
+.loading-message{
+    display:flex;
+    justify-content: center;
+}
 .spinner{
     display: flex;
     justify-content: center;
-    padding-top: 150px;
 }
 
 .footer{
     background-color: whitesmoke;
     width:100%;
     height: 50px;
+}
+.flex-graphs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pie-container{
+    border: solid 5px whitesmoke;/*Create individual borders around readings */
+    border-radius: 10px; /*Rounded corners*/
+    width: 42.5vw; /*standard width for each container*/
+    height: 45vh;
+    justify-content: center;
+}
+
+.Graphical-data{ /* a div for graphical data */
+    border: solid 5px whitesmoke;/*Create individual borders around readings */
+    border-radius: 10px; /*Rounded corners*/
+    width: 42.5vw; /*standard width for each container*/
+    height: 45vh;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 450px) {
+    .spinner{
+        padding-top: 100px;
+    }
 }
