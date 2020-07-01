@@ -35,6 +35,15 @@ class NavBar extends React.Component {
               Historical Air Quality
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link
+              className={isSelected === "About" ? "stayOrange" : "default"}
+              to="/About"
+              onClick={this.handleClick("About")}
+            >
+              About
+            </Link>
+          </li>
         </ul>
       </div>
     );

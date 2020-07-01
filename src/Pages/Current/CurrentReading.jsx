@@ -4,6 +4,8 @@ import RenderCurrentReading from "../../Components/RenderCurrentReading/RenderCu
 import Spinner from "../../Components/spinner/spinner";
 import Pie from "../../Components/PieChart/PieChart";
 import "./CurrentReading.styles.scss";
+import LocationMap from "../../Components/LocationMap/LocationMap";
+import SingleReadingBarChart from "../../Components/SingleReadingBarChart/SingleReadingBarChart";
 
 class CurrentReading extends React.Component {
   state = {
@@ -13,7 +15,7 @@ class CurrentReading extends React.Component {
 
   componentDidMount = () => {
     axios
-      .get("https://mysterious-sierra-11255.herokuapp.com/") //The port the backend server sits on
+      .get("http://localhost:5000") //The port the backend server sits on
       .then((response) => {
         this.setState({ readings: response.data, dataLoaded: true });
       })
@@ -41,21 +43,43 @@ class CurrentReading extends React.Component {
     }
   };
 
+  renderMap = () => {
+    const { readings, dataLoaded } = this.state;
+
+    if (dataLoaded === true) {
+      var latestResult = readings[0];
+      return <LocationMap reading={latestResult} />;
+    }
+  };
+
+  renderBar = () => {
+    const { readings, dataLoaded } = this.state;
+
+    if (dataLoaded === true) {
+      var latestResult = readings[0];
+      return <SingleReadingBarChart reading={latestResult} />;
+    }
+  };
+
   render() {
     const { dataLoaded } = this.state;
     return !dataLoaded === true ? (
-      <div className='loading'>
-      <p className='loading-message'><strong>Loading data from server...</strong></p>
+      <div className="loading">
+        <p className="loading-message">
+          <strong>Loading data from server...</strong>
+        </p>
         <div className="spinner">
           <Spinner />
         </div>
-        </div>
+      </div>
     ) : (
       <div className="CurrentReading">
         <div>{this.renderLatestReading()}</div>
         <div className="flex-graphs">
-          <div className="pie-container">{this.renderPieChart()}</div>
-          <div className="Graphical-data"></div>
+          <div className="bar-container">{this.renderBar()}</div>
+          <div className="data-container">{this.renderMap()}</div>
+          <div className="data-container">{this.renderPieChart()}</div>
+          <div className="data-container"></div>
         </div>
       </div>
     );

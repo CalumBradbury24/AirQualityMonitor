@@ -1,51 +1,75 @@
-.CurrentReading{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto 0;
+.CurrentReading {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 0;
 }
-.loading{
-    padding-top: 150px;
+.loading {
+  padding-top: 150px;
 }
-.loading-message{
-    display:flex;
-    justify-content: center;
+.loading-message {
+  display: flex;
+  justify-content: center;
 }
-.spinner{
-    display: flex;
-    justify-content: center;
-}
-
-.footer{
-    background-color: whitesmoke;
-    width:100%;
-    height: 50px;
-}
-.flex-graphs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.spinner {
+  display: flex;
+  justify-content: center;
 }
 
-.pie-container{
-    border: solid 5px whitesmoke;/*Create individual borders around readings */
-    border-radius: 10px; /*Rounded corners*/
-    width: 42.5vw; /*standard width for each container*/
-    height: 45vh;
-    justify-content: center;
+.footer {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 50px;
+}
+.flex-graphs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.Graphical-data{ /* a div for graphical data */
-    border: solid 5px whitesmoke;/*Create individual borders around readings */
-    border-radius: 10px; /*Rounded corners*/
-    width: 42.5vw; /*standard width for each container*/
-    height: 45vh;
-    justify-content: center;
+.data-container {
+  border: solid 5px whitesmoke; /*Create individual borders around readings */
+  border-radius: 10px; /*Rounded corners*/
+  width: 42.5vw; /*standard width for each container*/
+  height: 45vh;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.data-container:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  box-shadow: 1px 1px 2px 2px whitesmoke;
 }
 
+.bar-container{
+  border: solid 5px whitesmoke; /*Create individual borders around readings */
+  border-radius: 10px; /*Rounded corners*/
+  width: 42.5vw; /*standard width for each container*/
+  height: 45vh;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.bar-container:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  box-shadow: 1px 1px 2px 2px whitesmoke;
+}
 
-@media screen and (max-width: 450px) {
-    .spinner{
-        padding-top: 100px;
+@media screen and (max-width: 705px) {
+  .bar-container {
+      height: 23vh;
     }
+}
+
+@media screen and (max-width: 500px) {
+  .bar-container {
+      height: 19vh;
+    }
+}
+@media screen and (max-width: 450px) {
+  .spinner {
+    padding-top: 100px;
+  }
 }

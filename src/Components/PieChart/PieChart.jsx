@@ -29,29 +29,35 @@ class Pie extends React.Component {
       {
         title: "PM10. " + this.calculatePercentage(reading.PMTen) + "%",
         value: reading.PMTen,
-        color: '#ffa600'
+        color: "#ffa600",
       },
     ];
   };
 
   render() {
     return (
-      <div className="pie-wrapper">
-        <div className="pie">
-          <PieChart data={this.getPieData()} lineWidth={30} 
-          startAngle={0}
-          lengthAngle={-360} animate 
-          rounded
-          label={({ dataEntry }) => dataEntry.title.substring(0, 6)}
-         // label={({ dataEntry }) => this.calculatePercentage(dataEntry.)}
-          labelStyle={(index) => ({
-            fill: this.getPieData()[index].color,
-            fontSize: '5px',
-            fontFamily:'Open Sans',
-          })}
-          labelPosition={60} 
-        
-        />
+      <div className = 'content'>
+        <div className="bar-title">
+          <strong>PM concentration per cubic meter of air (%)</strong>
+        </div>
+        <div className="pie-wrapper">
+          <div className="pie">
+            <PieChart
+              data={this.getPieData()}
+              lineWidth={30}
+              startAngle={0}
+              lengthAngle={-360}
+              animate
+              rounded
+              label={({ dataEntry }) => dataEntry.title.substring(0, 6)}
+              labelStyle={(index) => ({
+                fill: this.getPieData()[index].color,
+                fontSize: "5px",
+                fontFamily: "Open Sans",
+              })}
+              labelPosition={60}
+            />
+          </div>
         </div>
       </div>
     );

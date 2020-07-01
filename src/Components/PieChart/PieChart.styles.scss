@@ -1,10 +1,18 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+}
+
 .pie-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     height: inherit;
+    
 }
 
 .pie{
     height: 30vh;
 }
+
