@@ -16,7 +16,7 @@ class CurrentReading extends React.Component {
 
   componentDidMount = () => {
     axios
-      .get("https://mysterious-sierra-11255.herokuapp.com/") //The port the backend server sits on
+      .get("http://localhost:5000") //The port the backend server sits on
       .then((response) => {
         this.setState({ readings: response.data, dataLoaded: true });
       })
@@ -87,7 +87,7 @@ class CurrentReading extends React.Component {
         <div>{this.renderLatestReading()}</div>
         <div className="flex-graphs">
           <div className="bar-container">{this.renderHorizontalBar()}</div>
-          {<div className="bar-container">{this.renderVerticalBar()}</div>}{" "}
+          {<div className="vertical-bar-container">{this.renderVerticalBar()}</div>}{" "}
           <div className="data-container">{this.renderPieChart()}</div>
           <div className="data-container">{this.renderMap()}</div>
         </div>

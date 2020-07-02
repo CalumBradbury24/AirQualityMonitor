@@ -41,7 +41,7 @@ class NavBar extends React.Component {
               to="/About"
               onClick={this.handleClick("About")}
             >
-              About
+              About Project
             </Link>
           </li>
         </ul>

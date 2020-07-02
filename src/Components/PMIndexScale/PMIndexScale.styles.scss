@@ -1,13 +1,30 @@
 .singleBar-container {
     position: relative;
   margin: auto;
-  width: 38vw;
+  width: 25vw;
   padding-top: 25px;
 }
-
-
-@media screen and (max-width: 411px) {
-    .chart-container {
-    padding-top: 7px;
+@media screen and (max-width: 1200px) {
+  .singleBar-container {
+ padding-top: 40px;
+  width: 40vw;
   }
+}
+@media screen and (max-width: 705px) {
+  .singleBar-container{
+   // width: 40vw;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+    .singleBar-container {
+    padding-top: 40px;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .singleBar-container {
+      width: 60vw;
+      padding-top: 5px;
+    }
   }

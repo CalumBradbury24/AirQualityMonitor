@@ -1,11 +1,35 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import "./PMIndexScale.styles.scss";
+import IndexScale from "../IndexScale/IndexScale";
 
 class PMIndexScale extends React.Component {
   returnValue = (value) => {
     const { reading } = this.props;
-    if (value === "PMTwoFive") {
+    if (value === "PMOne") {
+      if (reading.PMOne <= 11) {
+        return 1;
+      } else if (reading.PMOne <= 23) {
+        return 2;
+      } else if (reading.PMOne <= 35) {
+        return 3;
+      } else if (reading.PMOne <= 41) {
+        return 4;
+      } else if (reading.PMOne <= 47) {
+        return 5;
+      } else if (reading.PMOne <= 53) {
+        return 6;
+      } else if (reading.PMOne <= 58) {
+        return 7;
+      } else if (reading.PMOne <= 64) {
+        return 8;
+      } else if (reading.PMOne <= 70) {
+        return 9;
+      } else if (reading.PMOne > 70) {
+        return 10;
+      }
+    }
+    else if (value === "PMTwoFive") {
       if (reading.PMTwoFive <= 11) {
         return 1;
       } else if (reading.PMTwoFive <= 23) {
@@ -27,7 +51,7 @@ class PMIndexScale extends React.Component {
       } else if (reading.PMTwoFive > 70) {
         return 10;
       }
-    }else{
+    } else {
       if (reading.PMTen <= 16) {
         return 1;
       } else if (reading.PMTen <= 33) {
@@ -50,19 +74,19 @@ class PMIndexScale extends React.Component {
         return 10;
       }
     }
-    }
+  };
   getData = () => {
     return {
-      labels: ["PM2.5", "PM10"],
+      labels: ["PM1.0","PM2.5", "PM10"],
       datasets: [
         {
           label: false,
-          backgroundColor: ["#c60052", "#ffa600"],
+          backgroundColor: ["#00035c", "#c60052", "#ffa600"],
           borderColor: "whitesmoke",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",
           hoverBorderColor: "rgba(255,99,132,1)",
-          data: [this.returnValue("PMTwoFive"), this.returnValue("PMTen")]
+          data: [this.returnValue("PMOne"), this.returnValue("PMTwoFive"), this.returnValue("PMTen")],
         },
       ],
     };
@@ -72,7 +96,7 @@ class PMIndexScale extends React.Component {
     return (
       <div>
         <div className="bar-title">
-          <strong>Daily Air Quality Index Scale</strong>
+          <strong>Air Quality Index Scale</strong>
         </div>
         <div className="singleBar-container ">
           {" "}
@@ -91,19 +115,20 @@ class PMIndexScale extends React.Component {
                 yAxes: [
                   {
                     ticks: {
-                     beginAtZero: true,
-                     suggestedMax: 10
+                      beginAtZero: true,
+                      suggestedMax: 10,
                     },
                     scaleLabel: {
                       display: true,
-                      labelString: 'Index'
-                    }
+                      labelString: "Index Band",
+                    },
                   },
                 ],
               },
             }}
           />
         </div>
+        <IndexScale />
       </div>
     );
   }

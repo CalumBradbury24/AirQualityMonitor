@@ -12,6 +12,15 @@ class RenderCurrentReading extends React.Component {
 
   componentDidMount = () => {
     const { reading } = this.props;
+    if (reading.PMOne <= 35) {
+      this.setState({ PMOneStatus: "Low" });
+    } else if (reading.PMOne <= 53) {
+      this.setState({ PMOneStatus: "Moderate" });
+    } else if (reading.PMOne <= 70) {
+      this.setState({ PMOneStatus: "High" });
+    } else {
+      this.setState({ PMOneStatus: "Very high" });
+    }
 
     if (reading.PMTwoFive <= 35) {
       this.setState({ PMTwoFiveStatus: "Low" });

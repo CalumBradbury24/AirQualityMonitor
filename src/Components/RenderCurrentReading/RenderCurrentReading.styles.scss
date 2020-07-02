@@ -4,10 +4,10 @@
   justify-content: space-between;
 
   .reading-container {
-    border: solid 5px whitesmoke; /*Create individual borders around readings */
+    border: solid 5px navy; /*Create individual borders around readings */
     border-radius: 10px; /*Rounded corners*/
-    margin-top: 5px;
-    margin-bottom: 5px;
+    //margin-top: 5px;
+    margin-bottom: 10px;
     width: 190px; /*standard width for each container*/
     justify-content: center;
   }
@@ -16,8 +16,9 @@
     flex-wrap: wrap;
     justify-content: left;
     padding-top: 2px;
-    background-color: whitesmoke;
+    background-color: navy;
     margin: 0;
+    color: white;
   }
   .reading {
     display: flex;
@@ -40,8 +41,8 @@
     transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     box-shadow: 1px 1px 2px 2px whitesmoke;
   }
-
-  @media screen and (max-width: 800px) {
+  
+  @media screen and (max-width: 1120px) {
     .reading-container {
       width: 140px;
     }
@@ -49,13 +50,15 @@
       font-size: 14px;
     }
     .reading {
-      font-size: 1em;
-      padding: 1vh; /*pad content in border*/
+      font-size: 16px;
+      padding: 0.25vh; /*pad content in border*/
     }
     .concentration {
       font-size: 0.7em;
     }
+
   }
+  
 
   @media screen and (max-width: 500px) {
     .reading-container {
