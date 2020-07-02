@@ -1,0 +1,13 @@
+.singleBar-container {
+    position: relative;
+  margin: auto;
+  width: 38vw;
+  padding-top: 25px;
+}
+
+
+@media screen and (max-width: 411px) {
+    .chart-container {
+    padding-top: 7px;
+  }
+  }

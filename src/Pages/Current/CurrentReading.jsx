@@ -6,6 +6,7 @@ import Pie from "../../Components/PieChart/PieChart";
 import "./CurrentReading.styles.scss";
 import LocationMap from "../../Components/LocationMap/LocationMap";
 import SingleReadingBarChart from "../../Components/SingleReadingBarChart/SingleReadingBarChart";
+import PMIndexScale from '../../Components/PMIndexScale/PMIndexScale';
 
 class CurrentReading extends React.Component {
   state = {
@@ -52,12 +53,21 @@ class CurrentReading extends React.Component {
     }
   };
 
-  renderBar = () => {
+  renderHorizontalBar = () => {
     const { readings, dataLoaded } = this.state;
 
     if (dataLoaded === true) {
       var latestResult = readings[0];
       return <SingleReadingBarChart reading={latestResult} />;
+    }
+  };
+
+  renderVerticalBar = () => {
+    const { readings, dataLoaded } = this.state;
+
+    if (dataLoaded === true) {
+      var latestResult = readings[0];
+      return <PMIndexScale reading={latestResult} />;
     }
   };
 
@@ -76,10 +86,10 @@ class CurrentReading extends React.Component {
       <div className="CurrentReading">
         <div>{this.renderLatestReading()}</div>
         <div className="flex-graphs">
-          <div className="bar-container">{this.renderBar()}</div>
-          <div className="data-container">{this.renderMap()}</div>
+          <div className="bar-container">{this.renderHorizontalBar()}</div>
+          {<div className="bar-container">{this.renderVerticalBar()}</div>}{" "}
           <div className="data-container">{this.renderPieChart()}</div>
-          <div className="data-container"></div>
+          <div className="data-container">{this.renderMap()}</div>
         </div>
       </div>
     );

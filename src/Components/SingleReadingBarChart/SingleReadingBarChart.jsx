@@ -16,7 +16,6 @@ class SingleReadingBarChart extends React.Component {
           hoverBackgroundColor: "rgba(255,99,132,0.4)",
           hoverBorderColor: "rgba(255,99,132,1)",
           data: [reading.PMOne, reading.PMTwoFive, reading.PMTen],
-          // yAxisID: "y-axis-1",
         },
       ],
     };
@@ -36,7 +35,6 @@ class SingleReadingBarChart extends React.Component {
             options={{
               responsive: true,
               aspectRatio: 1,
-              // maintainAspectRatio: true,
               legend: {
                 display: false,
               },
@@ -49,6 +47,10 @@ class SingleReadingBarChart extends React.Component {
                     ticks: {
                       beginAtZero: true,
                     },
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Concentration (ug/m3)'
+                    }
                   },
                 ],
               },
