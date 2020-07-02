@@ -16,7 +16,7 @@ class CurrentReading extends React.Component {
 
   componentDidMount = () => {
     axios
-      .get("https://dashboard.heroku.com/apps/mysterious-sierra-11255") //The port the backend server sits on
+      .get("https://mysterious-sierra-11255.herokuapp.com/") //The port the backend server sits on
       .then((response) => {
         this.setState({ readings: response.data, dataLoaded: true });
       })
