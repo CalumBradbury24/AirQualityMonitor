@@ -10,7 +10,7 @@ class LocationMap extends Component {
   componentDidMount() {
     const googleMapScript = document.createElement("script");
     window.initMap = this.initMap;
-    googleMapScript.src = ``;
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDTfyW8ZL-8ho3Fsw0EAYaMEDzJwo8qGmE&callback=initMap`;
     window.document.body.appendChild(googleMapScript);
 
     googleMapScript.addEventListener("load", () => {
