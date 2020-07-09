@@ -60,19 +60,24 @@
   }
   
 
-  @media screen and (max-width: 500px) {
-    .reading-container {
-        width: 120px;
-      }
-    .title {
-      font-size: 12px;
-      padding-top: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .readings-container{
+    justify-content: space-evenly;
+  }
+  .reading-container {
+      width: 120px;
+      
     }
-    .reading {
-      font-size: 0.9em;
-    }
-    .concentration {
-      font-size: 0.6em;
-    }
+  .title {
+    font-size: 12px;
+    padding-top: 0px;
+  }
+  .reading {
+    font-size: 0.9em;
+  }
+  .concentration {
+    font-size: 0.6em;
   }
 }

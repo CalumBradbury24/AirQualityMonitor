@@ -74,22 +74,11 @@
 }
 
 
-@media screen and (max-width: 500px) {
-  .bar-container {
-      height: 23vh;
-    }
-    .vertical-bar-container{
-      width: 42.5vw; /*standard width for each container*/
-      height: 35vh;
-     
-    }
-}
-@media screen and (max-width: 450px) {
-  .spinner {
-    padding-top: 100px;
+
+@media screen and (max-width:700px) {
+  .flex-graphs{
+    justify-content: space-between;
   }
-}
-@media screen and (max-width:375px) {
   .bar-container {
     width: 100vw;
     height: 30vh;
@@ -100,11 +89,15 @@
   }
  .data-container{
   height: 45.5vh;
+  width: 100vw;
  }
  .map-container{
   height: 46.75vh;
+  width: 100vw;
  }
-
+ .spinner {
+  padding-top: 100px;
+}
 }
 @media screen and (max-width:320px) {
   .vertical-bar-container{

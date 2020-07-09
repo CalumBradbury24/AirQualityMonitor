@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 1200px) {
   .chart-container {
-    padding-top: 110px;
+    padding-top: 60px;
     width: 40vw;
   }
 }
@@ -28,6 +28,9 @@
 @media screen and (max-width: 500px) {
   .bar-title {
     font-size: 12px;
+  }
+  .chart-container {
+    width: 320px;
   }
 }
 
