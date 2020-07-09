@@ -1,7 +1,10 @@
 .nav{
- 
-    width:100%;
-    background-color: whitesmoke;
+  //: hidden;	/*To hide the horizontal scroller appearing during the animation*/
+  flex: none !important; 
+  width:100%;
+    background: url(../../assets/clouds.jpg);
+    background-size: cover;
+ //   background-color: whitesmoke;
    
 
     .list {
@@ -41,7 +44,6 @@
             font-size:20px; /* Font size normally*/ 
           }
       }
-    
 
 }
 

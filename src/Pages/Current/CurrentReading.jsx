@@ -89,7 +89,7 @@ class CurrentReading extends React.Component {
           <div className="bar-container">{this.renderHorizontalBar()}</div>
           {<div className="vertical-bar-container">{this.renderVerticalBar()}</div>}{" "}
           <div className="data-container">{this.renderPieChart()}</div>
-          <div className="data-container">{this.renderMap()}</div>
+          <div className="map-container">{this.renderMap()}</div>
         </div>
       </div>
     );
