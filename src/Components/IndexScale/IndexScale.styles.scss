@@ -70,6 +70,7 @@ margin-bottom: 0px;
   .container {
     flex-wrap: wrap;
     padding-top: 5px;
+    justify-content: center;
   }
   .index-item{
     font-size: 12px;
@@ -77,23 +78,22 @@ margin-bottom: 0px;
 .index-meaning{
   font-size: 8px;
 }
-}
-@media screen and (max-width: 500px){
-  .header{
-    margin-top: 5px;
-    font-size: 12px;
-  }
-  .container {
-    padding-top: 0px;
-  }
-  .index-item{
-    font-size: 10px;
-}
-.index-meaning{
-  font-size: 6px;
-}
 .individual-container{
   height:30px;
   width:33px;
 }
+.header{
+  margin-top: 5px;
+  font-size: 12px;
 }
+.container {
+  padding-top: 0px;
+}
+.index-item{
+  font-size: 10px;
+}
+.index-meaning{
+font-size: 6px;
+}
+}
+
