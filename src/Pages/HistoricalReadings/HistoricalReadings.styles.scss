@@ -24,7 +24,27 @@
 }
 @media screen and (max-width: 640px) {
   .hist-graph-container{
-    width: 50vh;
+   width: 50vh;
+  }
+  .Historical-page {
+    width: 95%;
+   
+  }
+}
+@media screen and (max-width: 540px) {
+  .hist-graph-container{
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .hist-graph-container{
+  width: 315px;
+    
+  }
+  .Historical-page {
+    width: 100%;
+   
   }
 }
  .table-container{

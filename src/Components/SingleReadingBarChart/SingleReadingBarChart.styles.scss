@@ -25,6 +25,11 @@
     padding-top: 25px;
   }
 }
+@media screen and (max-width: 700px) {
+  .chart-container {
+    width: 55vw;
+  }
+}
 @media screen and (max-width: 500px) {
   .bar-title {
     font-size: 12px;
@@ -34,14 +39,9 @@
   }
 }
 
-@media screen and (max-width: 411px) {
-  .chart-container {
-    padding-top: 7px;
-  }
-}
-
 @media screen and (max-width: 375px) {
   .chart-container {
-    width: 60vw;
+    padding-top: 15px;
+    width: 82vw;
   }
 }

@@ -12,7 +12,7 @@
 }
 @media screen and (max-width: 705px) {
   .singleBar-container{
-   // width: 40vw;
+    width: 40vw;
   }
   
 }
@@ -22,9 +22,22 @@
     padding-top: 40px;
   }
   }
+  @media screen and (max-width: 414px) {
+    .singleBar-container {
+  // padding-top: 40px;
+    width: 60vw;
+    }
+  }
   @media screen and (max-width: 375px) {
     .singleBar-container {
-      width: 60vw;
-      padding-top: 5px;
+   padding-top: 10px;
+  //  width: 60vw;
     }
+  }
+
+    @media screen and (max-width: 360px) {
+      .singleBar-container {
+       padding-top: 5px;
+      
+      }
   }

@@ -99,8 +99,17 @@
   padding-top: 100px;
 }
 }
+
+@media screen and (max-width:414px) {
+  .map-container{
+    height: 43.85vh;
+   }
+}
 @media screen and (max-width:320px) {
   .vertical-bar-container{
     height: 37vh;
   }
+  .map-container{
+    height: 47.75vh;
+   }
 }
