@@ -44,7 +44,7 @@ const About = () => {
         likely in lower respiratory symptoms and reduced lung function in
         children, and chronic obstructive pulmonary disease and reduced lung
         function in adults. See https://www.euro.who.int/__data/assets/pdf_file/0005/112199/E79097.pdf.
-      </p>
+      </p> 
       <h3 className = 'titles'>Why does particle size matter?</h3>
       <p className = 'paragraph'>
         The aerodynamic and physical properties of particles determine how they

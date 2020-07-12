@@ -31,8 +31,29 @@ class HistoricalReadings extends React.Component {
   getPM1LineData = () => {
     const { readings } = this.state;
     readings.reverse();
+    var data =[];
+    var decrement = 9;
+    for(var i = 0; i<10; i++){//7 readings to display
+      data[i] =  readings[decrement].PMOne
+      decrement--;
+    }
     return {
       labels: [
+        readings[9].date.substring(5, 10) +
+        "-" +
+        readings[9].date.substring(0, 2) +
+        " @ " +
+        readings[9].date.substring(11, 16),
+        readings[8].date.substring(5, 10) +
+        "-" +
+        readings[8].date.substring(0, 2) +
+        " @ " +
+        readings[8].date.substring(11, 16),
+        readings[7].date.substring(5, 10) +
+        "-" +
+        readings[7].date.substring(0, 2) +
+        " @ " +
+        readings[7].date.substring(11, 16),
         readings[6].date.substring(5, 10) +
           "-" +
           readings[6].date.substring(0, 2) +
@@ -74,15 +95,7 @@ class HistoricalReadings extends React.Component {
           backgroundColor: "rgba(75,192,192,0.4)",
           borderColor: "blue",
           borderWidth: 1,
-          data: [
-            readings[6].PMOne,
-            readings[5].PMOne,
-            readings[4].PMOne,
-            readings[3].PMOne,
-            readings[2].PMOne,
-            readings[1].PMOne,
-            readings[0].PMOne,
-          ],
+          data: data,
         },
       ],
     };
@@ -90,8 +103,29 @@ class HistoricalReadings extends React.Component {
   getPM2LineData = () => {
     const { readings } = this.state;
     readings.reverse();
+    var data =[];
+    var decrement = 9;
+    for(var i = 0; i<10; i++){//7 readings to display
+      data[i] =  readings[decrement].PMTwoFive
+      decrement--;
+    }
     return {
       labels: [
+        readings[9].date.substring(5, 10) +
+        "-" +
+        readings[9].date.substring(0, 2) +
+        " @ " +
+        readings[9].date.substring(11, 16),
+        readings[8].date.substring(5, 10) +
+        "-" +
+        readings[8].date.substring(0, 2) +
+        " @ " +
+        readings[8].date.substring(11, 16),
+        readings[7].date.substring(5, 10) +
+        "-" +
+        readings[7].date.substring(0, 2) +
+        " @ " +
+        readings[7].date.substring(11, 16),
         readings[6].date.substring(5, 10) +
           "-" +
           readings[6].date.substring(0, 2) +
@@ -133,15 +167,7 @@ class HistoricalReadings extends React.Component {
           backgroundColor: "rgba(75,192,192,0.4)",
           borderColor: "blue",
           borderWidth: 1,
-          data: [
-            readings[6].PMTwoFive,
-            readings[5].PMTwoFive,
-            readings[4].PMTwoFive,
-            readings[3].PMTwoFive,
-            readings[2].PMTwoFive,
-            readings[1].PMTwoFive,
-            readings[0].PMTwoFive,
-          ],
+          data: data,
         },
       ],
     };
@@ -150,13 +176,28 @@ class HistoricalReadings extends React.Component {
     const { readings } = this.state;
     readings.reverse();
     var data =[];
-    var decrement = 6;
-    for(var i = 0; i<7; i++){//7 readings to display
+    var decrement = 9;
+    for(var i = 0; i<10; i++){//7 readings to display
       data[i] =  readings[decrement].PMTen
       decrement--;
     }
     return {
       labels: [
+        readings[9].date.substring(5, 10) +
+        "-" +
+        readings[9].date.substring(0, 2) +
+        " @ " +
+        readings[9].date.substring(11, 16),
+        readings[8].date.substring(5, 10) +
+        "-" +
+        readings[8].date.substring(0, 2) +
+        " @ " +
+        readings[8].date.substring(11, 16),
+        readings[7].date.substring(5, 10) +
+        "-" +
+        readings[7].date.substring(0, 2) +
+        " @ " +
+        readings[7].date.substring(11, 16),
         readings[6].date.substring(5, 10) +
           "-" +
           readings[6].date.substring(0, 2) +
@@ -273,7 +314,6 @@ class HistoricalReadings extends React.Component {
                         ticks: {
                           maxRotation: 45,
                           minRotation: 45,
-                          //padding: 0
                         },
                       },
                     ],

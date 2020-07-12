@@ -1,6 +1,6 @@
 import React from "react";
 import "./renderHistoricalReadings.styles.scss";
-
+//Render five latest readings
 const HistoricalPMOneReadings = (props) => (
   <tr>
     <td >{props.data.SensorID}</td>
@@ -11,11 +11,14 @@ const HistoricalPMOneReadings = (props) => (
     <td >{props.data.HumidityDHT11}</td>
     {/* substring just gets the date part of the time string (excludes the timezone)*/}
     <td >
-      {props.data.date.substring(0, 10)} {"@"}{" "}
-      {props.data.date.substring(11, 16)}
+      {props.data.date.substring(5, 10)}{"-"}{props.data.date.substring(0, 4)} {"@"} {props.data.date.substring(11, 16)}
+     
     </td>
   </tr>
 );
+
+
+
 
 class RenderHistoricalReading extends React.Component {
   renderReadings = () => {
