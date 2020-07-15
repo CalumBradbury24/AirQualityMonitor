@@ -30,14 +30,14 @@ const About = () => {
         suspended in air many of which are hazardous. This complex mixture
         includes both organic and inorganic particles, such as dust, pollen,
         soot, smoke, and liquid droplets. These particles vary greatly in size,
-        composition, and origin. Particles in air are either: directly emitted,
+        composition, and origin. Particles in air are either directly emitted,
         for instance when fuel is burnt and when dust is carried by wind, or
-        indirectly formed, when gaseous pollutants previously emitted to air
+        indirectly formed, when gaseous pollutants previously emitted into the air
         turn into particulate matter.
       </p>
       <h3 className = 'titles'>How does Particulate Matter affect humans?</h3>
       <p className = 'paragraph'>
-        The World Health Organisation (WHO) state that Long-term exposure to
+        The World Health Organisation (WHO) state that long-term exposure to
         current ambient PM concentrations may lead to a marked reduction in life
         expectancy. The reduction in life expectancy is primarily due to
         increased cardio-pulmonary and lung cancer mortality. Increases are

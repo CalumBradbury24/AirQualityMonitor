@@ -4,6 +4,78 @@ import "./PMIndexScale.styles.scss";
 import IndexScale from "../IndexScale/IndexScale";
 
 class PMIndexScale extends React.Component {
+
+returnColour = (value) => {
+  const { reading } = this.props;
+  if (value === "PMOne") {
+    if (reading.PMOne <= 11) {
+      return 'rgb(163, 255, 171)';
+    } else if (reading.PMOne <= 23) {
+      return 'rgb(117, 255, 129)';
+    } else if (reading.PMOne <= 35) {
+      return 'rgba(10, 255, 2, 0.884)';
+    } else if (reading.PMOne <= 41) {
+      return 'yellow';
+    } else if (reading.PMOne <= 47) {
+      return ' rgb(255, 197, 36)';
+    } else if (reading.PMOne <= 53) {
+      return 'orange';
+    } else if (reading.PMOne <= 58) {
+      return 'rgb(255, 91, 91)';
+    } else if (reading.PMOne <= 64) {
+      return 'red';
+    } else if (reading.PMOne <= 70) {
+      return 'darkred';
+    } else if (reading.PMOne > 70) {
+      return 'rgb(158, 3, 158)';
+    }
+  }
+  else if (value === "PMTwoFive") {
+    if (reading.PMTwoFive <= 11) {
+      return 'rgb(163, 255, 171)';
+    } else if (reading.PMTwoFive <= 23) {
+      return 'rgb(117, 255, 129)';
+    } else if (reading.PMTwoFive <= 35) {
+      return 'rgba(10, 255, 2, 0.884)';
+    } else if (reading.PMTwoFive <= 41) {
+      return 'yellow';
+    } else if (reading.PMTwoFive <= 47) {
+      return ' rgb(255, 197, 36)';
+    } else if (reading.PMTwoFive <= 53) {
+      return 'orange';
+    } else if (reading.PMTwoFive <= 58) {
+      return 'rgb(255, 91, 91)';
+    } else if (reading.PMTwoFive <= 64) {
+      return 'red';
+    } else if (reading.PMTwoFive <= 70) {
+      return 'darkred';
+    } else if (reading.PMTwoFive > 70) {
+      return 'rgb(158, 3, 158)';
+    }
+  } else {
+    if (reading.PMTen <= 16) {
+      return 'rgb(163, 255, 171)';
+    } else if (reading.PMTen <= 33) {
+      return 'rgb(117, 255, 129)';
+    } else if (reading.PMTen <= 50) {
+      return 'rgba(10, 255, 2, 0.884)';
+    } else if (reading.PMTen <= 58) {
+      return 'yellow';
+    } else if (reading.PMTen <= 66) {
+      return ' rgb(255, 197, 36)';
+    } else if (reading.PMTen <= 75) {
+      return 'orange';
+    } else if (reading.PMTen <= 83) {
+      return 'rgb(255, 91, 91)';
+    } else if (reading.PMTen <= 91) {
+      return 'red';
+    } else if (reading.PMTen <= 100) {
+      return 'darkred';
+    } else if (reading.PMTen > 100) {
+      return 'rgb(158, 3, 158)';
+    }
+  }
+};
   returnValue = (value) => {
     const { reading } = this.props;
     if (value === "PMOne") {
@@ -81,7 +153,7 @@ class PMIndexScale extends React.Component {
       datasets: [
         {
           label: false,
-          backgroundColor: ["#00035c", "#c60052", "#ffa600"],
+          backgroundColor: [this.returnColour('PMOne'), this.returnColour('PMTwoFive'), this.returnColour('PMTen')],
           borderColor: "whitesmoke",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",

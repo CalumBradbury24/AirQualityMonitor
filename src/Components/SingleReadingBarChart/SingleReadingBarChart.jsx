@@ -10,7 +10,7 @@ class SingleReadingBarChart extends React.Component {
       datasets: [
         {
           label: false,
-          backgroundColor: ["#00035c", "#c60052", "#ffa600"],
+          backgroundColor: ["#34dbeb", "#99eb34", "#eb34e2"],
           borderColor: "whitesmoke",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",

@@ -19,7 +19,7 @@ class HistoricalReadings extends React.Component {
     const { data } = this.props;
     data.reverse();
     var graphData = [];//Graph data 
-    var labels = [];//Labels corresponding to grapg data
+    var labels = [];//Labels corresponding to graph data
     var decrement = 9;//Counter
     for (var i = 0; i < 10; i++) {//10 readings to display
       graphData[i] = data[decrement].PMOne;
@@ -43,7 +43,7 @@ class HistoricalReadings extends React.Component {
       ],
     };
   };
-  
+
   getPM2LineData = () => {
     const { data } = this.props;
     data.reverse();

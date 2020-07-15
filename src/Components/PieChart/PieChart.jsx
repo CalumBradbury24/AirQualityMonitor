@@ -19,17 +19,17 @@ class Pie extends React.Component {
       {
         title: " PM1.0 " + this.calculatePercentage(reading.PMOne) + "%", //Display percentage of particles in pie chart
         value: reading.PMOne,
-        color: "#00035c",
+        color: "#34dbeb",
       },
       {
         title: " PM2.5 " + this.calculatePercentage(reading.PMTwoFive) + "%",
         value: reading.PMTwoFive,
-        color: "#c60052",
+        color: "#99eb34",
       },
       {
         title: "PM10. " + this.calculatePercentage(reading.PMTen) + "%",
         value: reading.PMTen,
-        color: "#ffa600",
+        color: "#eb34e2",
       },
     ];
   };
