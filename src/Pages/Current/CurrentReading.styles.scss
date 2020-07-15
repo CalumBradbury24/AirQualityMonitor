@@ -7,18 +7,6 @@
   
 
 }
-.loading {
-  padding-top: 150px;
-}
-.loading-message {
-  display: flex;
-  justify-content: center;
-}
-.spinner {
-  display: flex;
-  justify-content: center;
-}
-
 .footer {
   background-color: whitesmoke;
   width: 100%;
@@ -95,9 +83,6 @@
   height: 46.75vh;
   width: 100vw;
  }
- .spinner {
-  padding-top: 100px;
-}
 }
 
 @media screen and (max-width:414px) {
