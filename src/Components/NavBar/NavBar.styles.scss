@@ -6,7 +6,9 @@
     background-size: cover;
  //   background-color: whitesmoke;
    
-
+.active{
+  color: yellow;
+}
     .list {
         display: flex;
         flex-wrap: wrap;

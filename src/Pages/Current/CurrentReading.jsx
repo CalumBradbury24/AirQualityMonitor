@@ -5,8 +5,8 @@ import "./CurrentReading.styles.scss";
 import LocationMap from "../../Components/LocationMap/LocationMap";
 import SingleReadingBarChart from "../../Components/SingleReadingBarChart/SingleReadingBarChart";
 import PMIndexScale from "../../Components/PMIndexScale/PMIndexScale";
-
-import withData from "../../withData";//Import HOC for getting data
+import ReadingChange from "../../Components/ReadingChange/ReadingChange";
+import withData from "../../withData"; //Import HOC for getting data
 
 class CurrentReading extends React.Component {
   renderLatestReading = () => {
@@ -40,6 +40,11 @@ class CurrentReading extends React.Component {
     return <PMIndexScale reading={latestResult} />;
   };
 
+  renderChanges = () => {
+    const { data } = this.props;
+    return <ReadingChange reading={data} />;
+  };
+
   render() {
     return (
       <div className="CurrentReading">
@@ -54,6 +59,7 @@ class CurrentReading extends React.Component {
           <div className="data-container">{this.renderPieChart()}</div>
           <div className="map-container">{this.renderMap()}</div>
         </div>
+        <div>{this.renderChanges()}</div>
       </div>
     );
   }

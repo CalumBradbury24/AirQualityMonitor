@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import RenderHistoricalReadings from "../../Components/renderHistoricalReadings/renderHistoricalReadings";
 import "./HistoricalReadings.styles.scss";
 
-import withData from "../../withData";
+import withData from "../../withData";//HOC
 
 class HistoricalReadings extends React.Component {
   state = {

@@ -6,8 +6,6 @@ class RenderCurrentReading extends React.Component {
     PMOneStatus: "",
     PMTwoFiveStatus: "",
     PMTenStatus: "",
-    TempStatus: "Moderate",
-    HumidityStatus: "Moderate",
   };
 
   componentDidMount = () => {
