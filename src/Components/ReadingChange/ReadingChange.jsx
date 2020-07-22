@@ -7,6 +7,7 @@ const result = (var1, var2) => {
 };
 
 const changes = (props) => {
+  props.reverse();
   return (
     <div className="changes">
       <div className="change-container">
@@ -44,7 +45,8 @@ const changes = (props) => {
 };
 
 const ReadingChange = ({ reading }) => {
-  reading.reverse();
+
+
   return (
     <div className="changes-container">
       <h4 className="title">Changes since last reading</h4>
