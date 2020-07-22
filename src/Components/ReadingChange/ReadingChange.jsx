@@ -45,8 +45,6 @@ const changes = (props) => {
 };
 
 const ReadingChange = ({ reading }) => {
-
-
   return (
     <div className="changes-container">
       <h4 className="title">Changes since last reading</h4>
