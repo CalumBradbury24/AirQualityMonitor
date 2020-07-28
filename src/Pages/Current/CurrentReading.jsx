@@ -1,5 +1,5 @@
 import React from "react";
-import RenderCurrentReading from "../../Components/RenderCurrentReading/RenderCurrentReading";
+import LatestReading from "../../Components/RenderCurrentReading/RenderCurrentReading";
 import Pie from "../../Components/PieChart/PieChart";
 import "./CurrentReading.styles.scss";
 import LocationMap from "../../Components/LocationMap/LocationMap";
@@ -13,7 +13,7 @@ class CurrentReading extends React.Component {
     const { data } = this.props;
     data.reverse();
     var latestResult = data[0];
-    return <RenderCurrentReading reading={latestResult} />;
+    return <LatestReading reading={latestResult} />;
   };
 
   renderPieChart = () => {

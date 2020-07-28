@@ -1,7 +1,7 @@
 import React from "react";
 import "./renderHistoricalReadings.styles.scss";
 //Render five latest readings
-const HistoricalPMOneReadings = (props) => (
+const HistoricalPMReadings = (props) => (
   <tr>
     <td >{props.data.SensorID}</td>
     <td >{props.data.PMOne}</td>
@@ -17,9 +17,6 @@ const HistoricalPMOneReadings = (props) => (
   </tr>
 );
 
-
-
-
 class RenderHistoricalReading extends React.Component {
   renderReadings = () => {
     const { reading } = this.props;
@@ -28,7 +25,7 @@ class RenderHistoricalReading extends React.Component {
       <React.Fragment>
         {reading.slice(0, 5).map((historicalReadings) => {
           return (
-            <HistoricalPMOneReadings
+            <HistoricalPMReadings
               data={historicalReadings}
               key={historicalReadings._id}
             />
