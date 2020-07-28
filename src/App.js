@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import CurrentReading from "./Pages/Current/CurrentReading";
+import LatestReadingPage from "./Pages/LatestReadingPage/LatestReadingPage";
 import NavBar from "./Components/NavBar/NavBar";
-import HistoricalReadings from "./Pages/HistoricalReadings/HistoricalReadings";
+import HistoricalReadingPage from "./Pages/HistoricalReadingPage/HistoricalReadingPage";
 import About from "./Pages/About/About";
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 
@@ -14,8 +14,8 @@ const App = () => {
         <NavBar />
         <Switch>
           <ErrorBoundary>
-            <Route exact path="/" component={CurrentReading} />
-            <Route exact path="/Historical" component={HistoricalReadings} />
+            <Route exact path="/" component={LatestReadingPage} />
+            <Route exact path="/Historical" component={HistoricalReadingPage} />
             <Route exact path="/About" component={About} />
           </ErrorBoundary>
         </Switch>

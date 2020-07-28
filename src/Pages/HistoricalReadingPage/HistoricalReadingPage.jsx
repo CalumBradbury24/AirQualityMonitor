@@ -1,18 +1,18 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import RenderHistoricalReadings from "../../Components/renderHistoricalReadings/renderHistoricalReadings";
-import "./HistoricalReadings.styles.scss";
+import PastReadings from "../../Components/renderHistoricalReadings/renderHistoricalReadings";
+import "./HistoricalReadingPage.styles.scss";
 
 import withData from "../../withData";//HOC
 
-class HistoricalReadings extends React.Component {
+class HistoricalReadingPage extends React.Component {
   state = {
     graphOption: "PM1", //Graph selection
   };
 
   renderHistReadings = () => {
     const { data } = this.props;
-    return <RenderHistoricalReadings reading={data} />;
+    return <PastReadings reading={data} />;
   };
 
   getPM1LineData = () => {
@@ -271,4 +271,4 @@ class HistoricalReadings extends React.Component {
   }
 }
 
-export default withData(HistoricalReadings);
+export default withData(HistoricalReadingPage);

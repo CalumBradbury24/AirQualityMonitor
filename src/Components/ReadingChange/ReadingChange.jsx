@@ -2,7 +2,6 @@ import React from "react";
 import "./readingChange.styles.scss";
 
 const ReadingChange = ({ reading }) => {
-  reading.reverse();
 
   const changes = () => {
     return (
