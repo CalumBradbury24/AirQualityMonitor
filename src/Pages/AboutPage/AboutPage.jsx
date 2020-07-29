@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.styles.scss";
+import "./AboutPage.styles.scss";
 
 const About = () => {
   return (
