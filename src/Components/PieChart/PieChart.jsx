@@ -61,4 +61,4 @@ const Pie = ( {reading }) => {
   )
 }
 
-export default Pie;
+export default React.memo(Pie);

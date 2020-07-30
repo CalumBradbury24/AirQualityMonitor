@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./RenderCurrentReading.styles.scss";
+import "./LatestReading.styles.scss";
 
 const LatestReading = ({ reading }) => {
   const [PMOneStatus, setPMOneStatus] = useState("");

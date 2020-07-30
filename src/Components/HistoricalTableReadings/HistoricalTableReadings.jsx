@@ -1,5 +1,5 @@
 import React from "react";
-import "./renderHistoricalReadings.styles.scss";
+import "./HistoricalTableReadings.styles.scss";
 //Render five latest readings
 const HistoricalPMReadings = (props) => (
   <tr>
@@ -59,4 +59,4 @@ const PastReadings = ({ reading }) => {
   );
 };
 
-export default PastReadings;
+export default React.memo(PastReadings);

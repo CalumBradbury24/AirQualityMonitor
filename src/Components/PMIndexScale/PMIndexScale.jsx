@@ -206,4 +206,4 @@ returnColour = (value) => {
   }
 }
 
-export default PMIndexScale;
+export default React.memo(PMIndexScale);

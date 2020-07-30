@@ -1,5 +1,5 @@
 import React from "react";
-import LatestReading from "../../Components/RenderCurrentReading/RenderCurrentReading";
+import LatestReading from "../../Components/LatestReading/LatestReading";
 import Pie from "../../Components/PieChart/PieChart";
 import "./LatestReadingPage.styles.scss";
 import LocationMap from "../../Components/LocationMap/LocationMap";

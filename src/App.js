@@ -3,8 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LatestReadingPage from "./Pages/LatestReadingPage/LatestReadingPage";
 import NavBar from "./Components/NavBar/NavBar";
-//import HistoricalReadingPage from "./Pages/HistoricalReadingPage/HistoricalReadingPage";
-//import About from "./Pages/About/About";
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import Spinner from './Components/spinner/spinner';
 //Lazy loading pages

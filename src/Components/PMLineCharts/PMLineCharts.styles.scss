@@ -1,0 +1,40 @@
+.graph-selector {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: solid black 1px;
+    margin-top: 5px;
+  }
+
+  .on-hover {
+    cursor: pointer;
+    color: grey;
+    margin-bottom: 0px;
+  }
+  
+  .orange-red {
+    color: orangered;
+  }
+  .default {
+    color: grey;
+  }
+  @media screen and (max-width: 440px) {
+    .line-container {
+      margin-top: 0px;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .hist-graph-container {
+      width: 400px;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .hist-graph-container {
+      width: 372px;
+  }
+  }
+  @media screen and (max-width: 325px) {
+    .hist-graph-container {
+      display: none;
+  }
+  }
