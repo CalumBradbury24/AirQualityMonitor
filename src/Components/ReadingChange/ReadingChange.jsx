@@ -2,7 +2,6 @@ import React from "react";
 import "./readingChange.styles.scss";
 
 const ReadingChange = ({ reading }) => {
-
   const changes = () => {
     return (
       <div className="changes">
@@ -53,7 +52,7 @@ const ReadingChange = ({ reading }) => {
 
   return (
     <div className="changes-container">
-      <h4 className="title">Changes since last reading</h4>
+      <h4 className="changes-title">Changes since last reading</h4>
       <div>{changes()}</div>
     </div>
   );

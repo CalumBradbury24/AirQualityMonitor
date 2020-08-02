@@ -1,11 +1,9 @@
 .CurrentReading {
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   margin: 10px auto 0;
   padding-bottom: 20px;
-  
-
 }
 .footer {
   background-color: whitesmoke;
@@ -21,80 +19,18 @@
 .data-container {
   border: solid 5px lavender; /*Create individual borders around readings */
   border-radius: 10px; /*Rounded corners*/
-  width: 42.5vw; /*standard width for each container*/
+  width: 46.3vw; /*standard width for each container*/
   height: 45vh;
   justify-content: center;
   margin-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 
-
-.vertical-bar-container{
-  border: solid 5px lavender; /*Create individual borders around readings */
-  border-radius: 10px; /*Rounded corners*/
-  width: 42.5vw; /*standard width for each container*/
-  height: 45vh;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-
-.bar-container{
-  border: solid 5px lavender; /*Create individual borders around readings */
-  border-radius: 10px; /*Rounded corners*/
-  width: 42.5vw; /*standard width for each container*/
-  height: 45vh;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.map-container{
-  border: solid 5px lavender; /*Create individual borders around readings */
-  border-radius: 10px; /*Rounded corners*/
-  width: 42.5vw; /*standard width for each container*/
-  height: 45vh;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-@media screen and (max-width: 705px) {
-  .bar-container {
-      height: 23vh;
-    }
-}
-
-
-
-@media screen and (max-width:700px) {
-  .flex-graphs{
-    justify-content: space-between;
-  }
-  .bar-container {
-    width: 100vw;
-    height: 30vh;
-  }
-  .vertical-bar-container{
-    width: 100vw;
-    height: 34vh;
-  }
+@media screen and (max-width:1500px) {
  .data-container{
-  height: 45.5vh;
   width: 100vw;
  }
- .map-container{
-  height: 46.75vh;
-  width: 100vw;
- }
+ 
 }
 
-@media screen and (max-width:414px) {
-  .map-container{
-    height: 43.85vh;
-   }
-}
-@media screen and (max-width:320px) {
-  .vertical-bar-container{
-    height: 37vh;
-  }
-  .map-container{
-    height: 47.75vh;
-   }
-}

@@ -1,7 +1,7 @@
 .chart-container {
   position: relative;
   margin: auto;
-  width: 38vw;
+  width: 700px;
   padding-top: 25px;
 }
 
@@ -13,42 +13,25 @@
   padding-top: 2px;
   padding-bottom: 2px;
 }
+@media screen and (max-width: 1500px) {
+  .chart-container {
+    width: 750px;
+  }
+}
 
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 840px) {
   .chart-container {
-    padding-top: 60px;
-    width: 40vw;
+    width: 600px;
+    padding-top: 45px;
   }
 }
-@media screen and (max-width: 710px) {
-  .chart-container {
-    padding-top: 25px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .chart-container {
-    width: 55vw;
-  }
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 680px) {
   .bar-title {
     font-size: 12px;
   }
   .chart-container {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .chart-container {
-    padding-top: 15px;
-    width: 82vw;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .chart-container {
-    padding-top: 15px;
-    width: 75vw;
+    width: 90vw;
+    padding-top: 60px;
   }
 }

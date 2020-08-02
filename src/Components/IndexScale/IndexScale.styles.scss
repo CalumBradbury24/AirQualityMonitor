@@ -66,39 +66,28 @@ margin-bottom: 0px;
     font-size: 10px;
 }
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 1000px) {
   .container {
     flex-wrap: wrap;
-    padding-top: 5px;
+    padding-top: 0px;
     justify-content: center;
   }
+
+.individual-container{
+  height:40px;
+  width:8vw;
+}
+.header{
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+}
+@media screen and (max-width: 500px){
   .index-item{
     font-size: 12px;
 }
 .index-meaning{
   font-size: 8px;
 }
-.individual-container{
-  height:30px;
-  width:33px;
-}
-.header{
-  margin-top: 5px;
-  font-size: 12px;
-}
-.container {
-  padding-top: 0px;
-}
-.index-item{
-  font-size: 10px;
-}
-.index-meaning{
-font-size: 6px;
-}
-}
-
-@media screen and (max-width: 320px){
-  .header{
-    margin-top: 0px;
-  }
 }

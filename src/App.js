@@ -5,6 +5,7 @@ import LatestReadingPage from "./Pages/LatestReadingPage/LatestReadingPage";
 import NavBar from "./Components/NavBar/NavBar";
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
 import Spinner from './Components/spinner/spinner';
+
 //Lazy loading pages
 const HistoricalReadingPage = lazy(() => import("./Pages/HistoricalReadingPage/HistoricalReadingPage"));
 const AboutPage = lazy(() => import("./Pages/AboutPage/AboutPage"));

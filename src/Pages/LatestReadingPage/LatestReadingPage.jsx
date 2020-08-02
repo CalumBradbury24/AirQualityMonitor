@@ -41,14 +41,14 @@ const LatestReadingPage = ({data}) => {
     <div className="CurrentReading">
       <div>{renderLatestReading()}</div>
       <div className="flex-graphs">
-        <div className="bar-container">{renderHorizontalBar()}</div>
+        <div className="data-container">{renderHorizontalBar()}</div>
         {
-          <div className="vertical-bar-container">
+          <div className="data-container">
             {renderVerticalBar()}
           </div>
         }{" "}
         <div className="data-container">{renderPieChart()}</div>
-        <div className="map-container">{renderMap()}</div>
+        <div className="data-container">{renderMap()}</div>
       </div>
       <div>{renderChanges()}</div>
     </div>

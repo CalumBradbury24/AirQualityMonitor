@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.styles.scss";
 import { Link, useLocation } from "react-router-dom";
-
+import AirLogo from '../Logo/Logo';
 const NavBar = () => {
 //Hooks gives functional components similar state functionality as classes
   let location = useLocation();//React Router hook to get current path
@@ -33,6 +33,7 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
+      <AirLogo />
     </div>
   );
 };

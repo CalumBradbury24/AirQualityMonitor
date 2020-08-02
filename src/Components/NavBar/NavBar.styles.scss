@@ -1,11 +1,23 @@
 .nav{
-  //: hidden;	/*To hide the horizontal scroller appearing during the animation*/
-  flex: none !important; 
-  width:100%;
-    background: url(../../assets/clouds.jpg);
-    background-size: cover;
- //   background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width:auto;
+  padding-left: 40px;
+  padding-right:40px;
+  //flex-direction: column;
+  margin: 0px auto 0;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  
+  span:last-of-type { //push logo to end of div
+    margin-left: auto;
    
+  }
+  @media screen and (max-width: 1080px) {
+    span:last-of-type  { 
+      margin-left: 0px;
+      }
+  }
 .active{
   color: yellow;
 }
@@ -13,8 +25,7 @@
         display: flex;
         flex-wrap: wrap;
         list-style-type: none;
-        justify-content: space-evenly;
-        padding:10px;
+        //justify-content: space-between;
         margin: 0px;
       }
 
@@ -40,13 +51,21 @@
         color: orange;
       }
 
-      @media screen and (max-width: 500px) {
-        .navbar-item {
-            
-            font-size:20px; /* Font size normally*/ 
+      @media screen and (max-width: 900px) {
+        .navbar-item { 
+            font-size:24px; /* Font size normally*/ 
           }
       }
 
+      @media screen and (max-width: 500px) {
+        .navbar-item { 
+            font-size:18px; /* Font size normally*/ 
+          }
+      }
+
+}
+ul{
+  padding: 0px;
 }
 
 

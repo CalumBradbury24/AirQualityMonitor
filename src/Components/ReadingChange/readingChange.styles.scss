@@ -2,6 +2,8 @@
     border: solid 5px navy; /*Create individual borders around readings */
     border-radius: 10px; /*Rounded corners*/
     width: auto; /*standard width for each container*/
+    background-color: white;
+   
 }
 
 .changes{
@@ -21,7 +23,7 @@
     justify-content: center;
     
 }
-.title {
+.changes-title {
     display: block;
     flex-wrap: wrap;
     justify-content: center;
