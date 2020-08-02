@@ -1,9 +1,7 @@
 .changes-container{
-    border: solid 5px navy; /*Create individual borders around readings */
-    border-radius: 10px; /*Rounded corners*/
-    width: auto; /*standard width for each container*/
-    background-color: white;
-   
+    border: solid 5px  lavender; /*Create individual borders around readings */
+    border-radius: 10px; /*Rounded corners*/ 
+    width: auto;
 }
 
 .changes{
@@ -13,22 +11,18 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.change-container{
-    display: block;
-    
-    //justify-content: right;
-}
+
 .change{
     display: flex;
     justify-content: center;
     
 }
 .changes-title {
-    display: block;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: center;
     padding-top: 2px;
-    background-color: navy;
+    padding-bottom: 2px;
+    background-color:  lavender;
     margin: 0;
-    color: white;
+    color: black;
   }

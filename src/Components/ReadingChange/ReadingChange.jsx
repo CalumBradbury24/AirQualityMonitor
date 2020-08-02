@@ -5,40 +5,40 @@ const ReadingChange = ({ reading }) => {
   const changes = () => {
     return (
       <div className="changes">
-        <div className="change-container">
+        <div className="">
           <strong>
             PM<sub>1.0</sub>
           </strong>{" "}
           <div className="change">
-            {result(reading[0].PMOne, reading[1].PMOne)}
+            {result(reading[0].PMOne, reading[1].PMOne)+ " ug/m3"}
           </div>{" "}
         </div>
-        <div className="change-container">
+        <div className="">
           <strong>
             PM<sub>2.5</sub>
           </strong>{" "}
           <div className="change">
-            {result(reading[0].PMTwoFive, reading[1].PMTwoFive)}
+            {result(reading[0].PMTwoFive, reading[1].PMTwoFive)+ " ug/m3"}
           </div>{" "}
         </div>
-        <div className="change-container">
+        <div className="">
           <strong>
             PM<sub>10</sub>
           </strong>{" "}
           <div className="change">
-            {result(reading[0].PMTen, reading[1].PMTen)}
+            {result(reading[0].PMTen, reading[1].PMTen)+ " ug/m3"}
           </div>{" "}
         </div>
-        <div className="change-container">
+        <div className="">
           <strong>Temperature</strong>{" "}
           <div className="change">
-            {result(reading[0].TemperatureDHT11, reading[1].TemperatureDHT11)}
+            {result(reading[0].TemperatureDHT11, reading[1].TemperatureDHT11)  + "\u00b0C"}
           </div>{" "}
         </div>
-        <div className="change-container">
+        <div className="">
           <strong>Humidity</strong>{" "}
           <div className="change">
-            {result(reading[0].HumidityDHT11, reading[1].HumidityDHT11)}
+            {result(reading[0].HumidityDHT11, reading[1].HumidityDHT11) + "%"}
           </div>{" "}
         </div>
       </div>
