@@ -19,7 +19,7 @@ const HistoricalPMReadings = (props) => (
   </tr>
 );
 
-const PastReadings = ({ reading }) => {
+const PastReadingsTable = ({ reading }) => {
   const renderReadings = () => {
     reading.reverse();
     return (
@@ -59,4 +59,4 @@ const PastReadings = ({ reading }) => {
   );
 };
 
-export default React.memo(PastReadings);
+export default React.memo(PastReadingsTable);

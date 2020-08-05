@@ -1,10 +1,14 @@
 .graph-selector {
     display: flex;
     justify-content: space-evenly;
-    border-top: solid black 1px;
     margin-top: 5px;
   }
-
+  .hist-graph-container {
+    position: relative;
+    margin: auto;
+    width: 100vh;
+    padding-top: 25px;
+  }
   .on-hover {
     cursor: pointer;
     color: grey;

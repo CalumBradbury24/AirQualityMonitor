@@ -1,93 +1,27 @@
+
 .Historical-page {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin: 0px auto 0;
-  padding-bottom: 20px;
-}
-.hist-graph-container {
-  position: relative;
-  margin: auto;
-  width: 100vh;
-  padding-top: 25px;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "side-bar graphs" "side-bar table";
 }
 
-@media screen and (max-width: 1100px) {
-  .hist-graph-container {
-    width: 75vh;
-  }
-}
-@media screen and (max-width: 800px) {
-  .hist-graph-container {
-    width: 60vh;
-  }
-}
-@media screen and (max-width: 640px) {
-  .hist-graph-container {
-    width: 50vh;
-  }
-  .Historical-page {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 540px) {
-  .hist-graph-container {
-    width: 450px;
-  }
+.side-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ".";
+  grid-area: side-bar;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 
-@media screen and (max-width: 440px) {
-  .hist-graph-container {
-    width: 315px;
-  }
-  .Historical-page {
-    width: 100%;
-  }
-}
-.table-container {
-  // border: solid 5px lavender; /*Create individual borders around readings */
-  //border-radius: 10px; /*Rounded corners*/
-  //width: 100vw; /*standard width for each container*/
-  //height: 45vh;
-  //justify-content: center;
-  //margin-bottom: 10px;
-}
-@media screen and (max-width: 440px) {
-  .line-container {
-    margin-top: 0px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .hist-graph-container {
-    width: 400px;
-}
-}
-@media screen and (max-width: 375px) {
-  .hist-graph-container {
-    width: 372px;
-}
-}
-@media screen and (max-width: 325px) {
-  .hist-graph-container {
-    display: none;
-}
-}
-.graph-selector {
-  display: flex;
-  justify-content: space-evenly;
-  border-top: solid black 1px;
-  margin-top: 5px;
-}
+.graphs { grid-area: graphs; }
 
-.on-hover {
-  cursor: pointer;
-  color: grey;
-  margin-bottom: 0px;
-}
+.table { grid-area: table; }
 
-.orange-red {
-  color: orangered;
-}
-.default {
-  color: grey;
-}
+
+
+
+

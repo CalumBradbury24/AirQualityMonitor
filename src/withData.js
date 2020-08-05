@@ -27,7 +27,7 @@ const withData = (WrappedComponent) => {
       return !dataLoaded === true ? (
         <div className="loading">
           <p className="loading-message">
-            <strong>Loading from Heroku backend server...this may take up to 30 seconds</strong>
+            <strong>Loading data from Heroku back-end server...this may take up to 30 seconds</strong>
           </p>
           <div className="spinner">
             <Spinner />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-
+import './PMLineCharts.styles.scss';
 
 //Functional components always re-render whenever the parent re-renders, thus it can cause too many re-renders if the parent re-renders a lot
 class PMLineCharts extends React.Component {
