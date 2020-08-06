@@ -14,8 +14,10 @@
     margin-left: 25px;
   }
   .hist-graph-container {
-   margin: auto;
-    width:50%;
+    position: relative;
+    margin: auto;
+    width: 700px;
+    padding-top: 25px;
   }
  
   .on-hover {
@@ -29,4 +31,18 @@
   .default {
     color: grey;
   }
- 
+  @media screen and (max-width: 930px) {
+    .hist-graph-container {
+      width: 550px;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .hist-graph-container {
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .hist-graph-container {
+      width: 70vw;
+    }
+  }

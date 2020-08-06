@@ -36,8 +36,8 @@ const PastReadingsTable = ({ reading }) => {
   };
   return (
     <table className="table-styles">
-      <thead className="">
-        <tr className="">
+      <thead >
+        <tr >
           <th>Sensor ID</th>
           <th>
             PM<sub>1.0</sub> (ug/m3)

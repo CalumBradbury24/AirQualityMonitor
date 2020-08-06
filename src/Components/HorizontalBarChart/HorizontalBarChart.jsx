@@ -26,7 +26,7 @@ const HorizontalBarChart = ({ reading }) => {
         <strong>PM concentration per cubic meter of air (ug/m3)</strong>
       </div>
       <div className="chart-container ">
-        <HorizontalBar
+        <HorizontalBar className='heigh'
           data={getBarData()}
           options={{
             responsive: true,

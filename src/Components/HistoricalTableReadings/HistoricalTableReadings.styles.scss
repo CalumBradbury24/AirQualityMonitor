@@ -17,26 +17,31 @@ td, th {
    }
 }
 .table-styles{
-  height: 50%;
+  height: 80%;
   width: 90%;
+  margin: 25px;
+}
+@media screen and (max-width: 860px) {
+  td, th {
+      padding: 0rem;
+      font-size: 14px; 
+    }
 }
 
 @media screen and (max-width: 620px) {
     td, th {
-        padding: 0rem;  
-        font-size: 12px; 
+        padding: 0rem;
+        font-size: 11px; 
       }
   }
 
   @media screen and (max-width: 375px) {
     td, th {
-        padding: 0rem;  
         font-size: 10px; 
       }
   }
 @media screen and (max-width: 325px) {
     td, th {
-        padding: 0rem;  
         font-size: 9px; 
       }
   }

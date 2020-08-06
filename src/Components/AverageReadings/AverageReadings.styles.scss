@@ -23,6 +23,7 @@
 }
 .avg-text {
   display: inline-block;
+  margin-left: 10px;
 }
 .avg-reading {
   font-weight: bold;
@@ -32,4 +33,37 @@
 .avg-images {
   height: 150px;
   width: 150px;
+}
+@media screen and (max-width: 1500px) {
+  .avg-images {
+    height: 100px;
+    width: 100px;
+  }
+  .avg-reading {
+    font-size: 22px; 
+  }
+}
+@media screen and (max-width: 1200px) {
+  .avg-images {
+    height: 80px;
+    width: 80px;
+  }
+  .avg-reading {
+    font-size: 18px; 
+  }
+  .avg-title {
+  font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .avg-images {
+    height: 40px;
+    width: 40px;
+  }
+  .avg-reading {
+    font-size: 12px; 
+  }
+  .avg-title {
+  font-size: 16px;
+  }
 }

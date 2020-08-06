@@ -35,3 +35,11 @@
     padding-top: 60px;
   }
 }
+
+@media screen and (max-height: 850px) {
+  .chartjs-render-monitor {
+ 
+    height:30vh !important;
+  
+  }
+}
