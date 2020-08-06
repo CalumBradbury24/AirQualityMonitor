@@ -3,42 +3,30 @@
     justify-content: space-evenly;
     margin-top: 5px;
   }
-  .hist-graph-container {
-    position: relative;
-    margin: auto;
-    width: 100vh;
-    padding-top: 25px;
+  .line-container{
+   padding-bottom: 25px;
   }
+  .graphs-title{
+    width:100%;
+    display: flex;
+    justify-content: left;
+    margin-top: 8px;
+    margin-left: 25px;
+  }
+  .hist-graph-container {
+   margin: auto;
+    width:50%;
+  }
+ 
   .on-hover {
     cursor: pointer;
-    color: grey;
     margin-bottom: 0px;
   }
   
-  .orange-red {
-    color: orangered;
+  .blue {
+    color: blue;
   }
   .default {
     color: grey;
   }
-  @media screen and (max-width: 440px) {
-    .line-container {
-      margin-top: 0px;
-    }
-  }
-
-  @media screen and (max-width: 414px) {
-    .hist-graph-container {
-      width: 400px;
-  }
-  }
-  @media screen and (max-width: 375px) {
-    .hist-graph-container {
-      width: 372px;
-  }
-  }
-  @media screen and (max-width: 325px) {
-    .hist-graph-container {
-      display: none;
-  }
-  }
+ 

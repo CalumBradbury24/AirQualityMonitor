@@ -21,7 +21,6 @@ const HistoricalPMReadings = (props) => (
 
 const PastReadingsTable = ({ reading }) => {
   const renderReadings = () => {
-    reading.reverse();
     return (
       <React.Fragment>
         {reading.slice(0, 5).map((historicalReadings) => {
@@ -36,7 +35,7 @@ const PastReadingsTable = ({ reading }) => {
     );
   };
   return (
-    <table className="">
+    <table className="table-styles">
       <thead className="">
         <tr className="">
           <th>Sensor ID</th>

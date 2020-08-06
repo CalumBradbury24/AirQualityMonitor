@@ -4,16 +4,10 @@ import './PMLineCharts.styles.scss';
 
 //Functional components always re-render whenever the parent re-renders, thus it can cause too many re-renders if the parent re-renders a lot
 class PMLineCharts extends React.Component {
-  
 
 state = {
   graphOption: "PM1", //Graph selection
 };
-
-componentDidMount = () => {
-  const { readings } = this.props;
-  readings.reverse();
-}
 
 getPM1LineData = () => {
   const { readings } = this.props;
@@ -46,7 +40,6 @@ getPM1LineData = () => {
 
 getPM2LineData = () => {
   const { readings } = this.props;
- // data.reverse();
   var graphData = [];
   var labels=[];
   var decrement = 9;
@@ -75,7 +68,6 @@ getPM2LineData = () => {
 
 getPM10LineData = () => {
   const { readings } = this.props;
-  //data.reverse();
   var graphData = [];
   var labels=[];
   var decrement = 9;
@@ -110,10 +102,11 @@ render() {
   const { graphOption } = this.state;
   return (
     <div>
+      <h2 className ='graphs-title'>PM Readings over time</h2>
       <div className="graph-selector">
         <h4
           className={
-            "on-hover " + (graphOption === "PM1" ? "orange-red" : "default")
+            "on-hover " + (graphOption === "PM1" ? "blue" : "default")
           }
           onClick={this.handleClick("PM1")}
         >
@@ -121,7 +114,7 @@ render() {
         </h4>
         <h4
           className={
-            "on-hover " + (graphOption === "PM2" ? "orange-red" : "default")
+            "on-hover " + (graphOption === "PM2" ? "blue" : "default")
           }
           onClick={this.handleClick("PM2")}
         >
@@ -129,7 +122,7 @@ render() {
         </h4>
         <h4
           className={
-            "on-hover " + (graphOption === "PM10" ? "orange-red" : "default")
+            "on-hover " + (graphOption === "PM10" ? "blue" : "default")
           }
           onClick={this.handleClick("PM10")}
         >

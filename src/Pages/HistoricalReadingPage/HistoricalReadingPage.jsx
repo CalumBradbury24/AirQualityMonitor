@@ -16,19 +16,14 @@ const HistoricalReadingPage = ({ data }) => {
   };
 
   const renderAverageReadings = () => (
-   /* data.map((historicalReadings) => (
-        <AverageReadings
-          data={historicalReadings} key={historicalReadings._id} />
-      )
-    )*/
     <AverageReadings data={data}/>
   );
 
   return (
     <div className="Historical-page ">
       <div className="side-bar">{renderAverageReadings()}</div>
-      <div className="graphs">{renderHistReadings()}</div>
-      <div className="table">{renderLineCharts()}</div>
+      <div className="graphs">{renderLineCharts()}</div>
+      <div className="table">{renderHistReadings()}</div>
     </div>
   );
 };

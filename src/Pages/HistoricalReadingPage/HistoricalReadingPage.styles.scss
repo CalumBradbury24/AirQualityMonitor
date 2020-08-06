@@ -2,7 +2,7 @@
 .Historical-page {
   display: grid;
   grid-template-columns: 0.4fr 1.6fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.76fr;
   gap: 1px 1px;
   grid-template-areas: "side-bar graphs" "side-bar table";
 }
@@ -17,9 +17,20 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 }
 
-.graphs { grid-area: graphs; }
+.graphs { 
+  grid-area: graphs; 
+  background-color: whitesmoke;
+  overflow: hidden;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}
 
-.table { grid-area: table; }
+.table { 
+  grid-area: table;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+ }
 
 
 
