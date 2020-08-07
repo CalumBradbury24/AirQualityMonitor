@@ -13,5 +13,32 @@
     width: 80vw;
   }
 }
+@media screen and (max-height: 900px)and (min-width:1503px) {
+  #PM {
+     width: 25vw !important;
+     height:25vh !important;
+     margin: auto;
+   
+   }
+ }
+
+ @media screen and (max-height: 886px) and (max-width:1502px){
+   #PM {
+      width: 40vw !important;
+      height:25vh !important;
+      margin: auto;
+    
+    }
+  }
+  @media screen and (max-height: 812px) and (max-width:375px){
+    #PM {
+       width: 70vw !important;
+       height:25vh !important;
+       margin: auto;
+     
+     }
+   }
+  
+ 
 
 

@@ -172,7 +172,7 @@ returnColour = (value) => {
         </div>
         <div className="singleBar-container ">
           {" "}
-          <Bar
+          <Bar id='PM'
             data={this.getData()}
             options={{
               responsive: true,

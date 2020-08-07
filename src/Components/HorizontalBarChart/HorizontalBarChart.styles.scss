@@ -36,10 +36,28 @@
   }
 }
 
-@media screen and (max-height: 850px) {
-  .chartjs-render-monitor {
- 
-    height:30vh !important;
+
+@media screen and (max-height: 900px)and (min-width:1503px) {
+  #horizontal {
+     width: 40vw !important;
+     height:33vh !important;
+     margin: auto;
+   
+   }
+ }
+@media screen and (max-height: 900px)and (max-width:1502px) {
+ #horizontal {
+    width: 60vw !important;
+    height:33vh !important;
+    margin: auto;
   
   }
 }
+@media screen and (max-height: 650px) {
+  #horizontal {
+     width: 40vw;
+     height:33vh !important;
+     margin: auto;
+   
+   }
+ }
