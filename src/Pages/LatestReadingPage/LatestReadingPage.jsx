@@ -9,8 +9,7 @@ import ReadingChange from "../../Components/ReadingChange/ReadingChange";
 import withData from "../../withData"; //Import HOC for getting data
 
 const LatestReadingPage = ({data}) => {
-  data.reverse();//Last reading in data[0]
-  const latestResult = data[0];
+  const latestResult = data[data.length-1];
  
   const renderLatestReading = () => {
     return <LatestReading reading={latestResult} />;
@@ -31,7 +30,6 @@ const LatestReadingPage = ({data}) => {
   const renderVerticalBar = () => {
     return <PMIndexScale reading={latestResult} />;
   };
-
   
   const renderChanges = () => {
     return <ReadingChange reading={data} />;

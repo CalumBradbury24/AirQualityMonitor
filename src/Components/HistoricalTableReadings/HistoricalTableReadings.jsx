@@ -11,9 +11,11 @@ const HistoricalPMReadings = (props) => (
     <td>{props.data.HumidityDHT11}</td>
     {/* substring just gets the date part of the time string (excludes the timezone)*/}
     <td>
-      {props.data.date.substring(5, 10)}
+      {props.data.date.substring(8, 10)}
       {"-"}
-      {props.data.date.substring(0, 4)} {"@"}{" "}
+      {props.data.date.substring(5, 7)}
+      {"-"}
+      {props.data.date.substring(0, 2)} {"@"}{" "}
       {props.data.date.substring(11, 16)}
     </td>
   </tr>
@@ -21,9 +23,10 @@ const HistoricalPMReadings = (props) => (
 
 const PastReadingsTable = ({ reading }) => {
   const renderReadings = () => {
+    const length = reading.length;
     return (
       <React.Fragment>
-        {reading.slice(0, 5).map((historicalReadings) => {
+        {reading.slice(length-5, length).map((historicalReadings) => {
           return (
             <HistoricalPMReadings
               data={historicalReadings}
@@ -50,7 +53,7 @@ const PastReadingsTable = ({ reading }) => {
           </th>
           <th>Temp {"\u00b0C"}</th>
           <th>Humidity (%)</th>
-          <th>Date</th>
+          <th>Date (DD-MM-YY)</th>
         </tr>
       </thead>
       <tbody>{renderReadings()}</tbody>

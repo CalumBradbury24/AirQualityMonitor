@@ -11,8 +11,7 @@ const HistoricalReadingPage = ({ data }) => {
   };
 
   const renderLineCharts = () => {
-    const readings = data.reverse();
-    return <PMLineCharts readings={readings} />;
+    return <PMLineCharts readingData={data} />;
   };
 
   const renderAverageReadings = () => (

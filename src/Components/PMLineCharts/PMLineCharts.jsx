@@ -9,77 +9,23 @@ state = {
   graphOption: "PM1", //Graph selection
 };
 
-getPM1LineData = () => {
-  const { readings } = this.props;
-  
+getPM1LineData = (PMvalue) => {
+  const { readingData } = this.props;
+
   var graphData = [];//Graph data 
   var labels = [];//Labels corresponding to graph data
-  var decrement = 9;//Counter
+  var counter = 10;//Counter
   for (var i = 0; i < 10; i++) {//10 readings to display
-    graphData[i] = readings[decrement].PMOne;
+    graphData[i] = readingData[readingData.length-counter][PMvalue];
     labels[i] =
-    readings[decrement].date.substring(5, 10) +
+    readingData[readingData.length-counter].date.substring(8, 10) +
       "-" +
-      readings[decrement].date.substring(0, 2) +
-      " @ " +
-      readings[decrement].date.substring(11, 16);
-    decrement--;
-  }
-  return {
-    labels: labels,
-    datasets: [
-      {
-        backgroundColor: "rgba(75,192,192,0.4)",
-        borderColor: "blue",
-        borderWidth: 1,
-        data: graphData,
-      },
-    ],
-  };
-};
-
-getPM2LineData = () => {
-  const { readings } = this.props;
-  var graphData = [];
-  var labels=[];
-  var decrement = 9;
-  for (var i = 0; i < 10; i++) {
-    graphData[i] = readings[decrement].PMTwoFive;
-    labels[i] =
-    readings[decrement].date.substring(5, 10) +
+      readingData[readingData.length-counter].date.substring(5, 7) +
       "-" +
-      readings[decrement].date.substring(0, 2) +
+      readingData[readingData.length-counter].date.substring(0, 2) +
       " @ " +
-      readings[decrement].date.substring(11, 16);
-    decrement--;
-  }
-  return {
-    labels: labels,
-    datasets: [
-      {
-        backgroundColor: "rgba(75,192,192,0.4)",
-        borderColor: "blue",
-        borderWidth: 1,
-        data: graphData,
-      },
-    ],
-  };
-};
-
-getPM10LineData = () => {
-  const { readings } = this.props;
-  var graphData = [];
-  var labels=[];
-  var decrement = 9;
-  for (var i = 0; i < 10; i++) {
-    graphData[i] = readings[decrement].PMTen;
-    labels[i] =
-    readings[decrement].date.substring(5, 10) +
-      "-" +
-      readings[decrement].date.substring(0, 2) +
-      " @ " +
-      readings[decrement].date.substring(11, 16);
-    decrement--;
+      readingData[readingData.length-counter].date.substring(11, 16);
+      counter--;
   }
   return {
     labels: labels,
@@ -96,8 +42,8 @@ getPM10LineData = () => {
 
 handleClick = (event) => () => {
   this.setState({ graphOption: event });
-  console.log(event);
 };
+
 render() {
   const { graphOption } = this.state;
   return (
@@ -133,7 +79,7 @@ render() {
         {graphOption === "PM1" ? (
           <div className="hist-graph-container">
             <Line
-              data={this.getPM1LineData()}
+              data={this.getPM1LineData('PMOne')}
               options={{
                 responsive: true,
                 aspectRatio: 1,
@@ -175,7 +121,7 @@ render() {
           <div className="hist-graph-container">
             {" "}
             <Line
-              data={this.getPM2LineData()}
+              data={this.getPM1LineData('PMTwoFive')}
               options={{
                 responsive: true,
                 aspectRatio: 1,
@@ -217,7 +163,7 @@ render() {
           <div className="hist-graph-container">
             {" "}
             <Line
-              data={this.getPM10LineData()}
+              data={this.getPM1LineData('PMTen')}
               options={{
                 responsive: true,
                 aspectRatio: 1,
