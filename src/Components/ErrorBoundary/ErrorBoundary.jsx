@@ -7,7 +7,7 @@ class ErrorBoundary extends React.Component{
         hasErrored: false, //error or not?
     }
     //error argument is error in a child component
-    static getDerivedStateFromError(error){//Catches any error thrown in choldren of ErrorBoundary component
+    static getDerivedStateFromError(error){//Catches any error thrown in children of ErrorBoundary component
         //process the error
         return{ hasErrored: true }
     }

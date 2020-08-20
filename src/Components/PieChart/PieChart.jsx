@@ -4,12 +4,12 @@ import "./PieChart.styles.scss";
 
 const Pie = ( {reading }) => {
 
-  const calculatePercentage = (percent) => {
-    //sum all = 208, divide individual value by sum and mulitple by 100, (90/208* 100 = 43%)
+  const calculatePercentage = (value) => {
+    //sum all, divide individual value by sum and mulitple by 100, (90/208* 100 = 43%)
     //Cast strings as integers in order to sum
     let sum =
       Number(reading.PMOne) + Number(reading.PMTwoFive) + Number(reading.PMTen);
-    let answer = (Number(percent) / sum) * 100; //Get answer
+    let answer = (Number(value) / sum) * 100; //Get answer
     return answer.toFixed(2); //Return answer to 2 decimal places
   };
 

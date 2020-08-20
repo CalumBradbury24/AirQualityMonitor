@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import './LocationMap.styles.scss';
 
-
-
 class LocationMap extends Component {
    
   googleMapRef = React.createRef();

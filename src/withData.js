@@ -14,7 +14,7 @@ const withData = (WrappedComponent) => {
     }
     componentDidMount = () => {
       axios
-        .get("https://mysterious-sierra-11255.herokuapp.com/") //The port the backend server sits on
+        .get("https://mysterious-sierra-11255.herokuapp.com/") //The port the backend server API sits on
         .then((response) => {
           this.setState({ data: response.data, dataLoaded: true });
         })

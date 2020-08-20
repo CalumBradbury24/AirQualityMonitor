@@ -3,10 +3,9 @@ import { Bar } from "react-chartjs-2";
 import "./PMIndexScale.styles.scss";
 import IndexScale from "../IndexScale/IndexScale";
 
-class PMIndexScale extends React.Component {
+const PMIndexScale = ({reading}) => {
 
-returnColour = (value) => {
-  const { reading } = this.props;
+const returnColour = (value) => {
   if (value === "PMOne") {
     if (reading.PMOne <= 11) {
       return 'rgb(163, 255, 171)';
@@ -76,8 +75,7 @@ returnColour = (value) => {
     }
   }
 };
-  returnValue = (value) => {
-    const { reading } = this.props;
+  const returnValue = (value) => {
     if (value === "PMOne") {
       if (reading.PMOne <= 11) {
         return 1;
@@ -147,24 +145,23 @@ returnColour = (value) => {
       }
     }
   };
-  getData = () => {
+ const getData = () => {
     return {
       labels: ["PM1.0","PM2.5", "PM10"],
       datasets: [
         {
           label: false,
-          backgroundColor: [this.returnColour('PMOne'), this.returnColour('PMTwoFive'), this.returnColour('PMTen')],
+          backgroundColor: [returnColour('PMOne'), returnColour('PMTwoFive'), returnColour('PMTen')],
           borderColor: "whitesmoke",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",
           hoverBorderColor: "rgba(255,99,132,1)",
-          data: [this.returnValue("PMOne"), this.returnValue("PMTwoFive"), this.returnValue("PMTen")],
+          data: [returnValue("PMOne"), returnValue("PMTwoFive"), returnValue("PMTen")],
         },
       ],
     };
   };
 
-  render() {
     return (
       <div>
         <div className="bar-title">
@@ -173,7 +170,7 @@ returnColour = (value) => {
         <div className="singleBar-container ">
           {" "}
           <Bar id='PM'
-            data={this.getData()}
+            data={getData}
             options={{
               responsive: true,
               aspectRatio: 1,
@@ -203,7 +200,6 @@ returnColour = (value) => {
         <IndexScale />
       </div>
     );
-  }
 }
 
 export default React.memo(PMIndexScale);
