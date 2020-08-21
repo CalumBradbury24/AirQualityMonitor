@@ -2,7 +2,9 @@ import React from "react";
 import { HorizontalBar } from "react-chartjs-2";
 import "./HorizontalBarChart.styles.scss";
 
-const HorizontalBarChart = ({ reading }) => {
+import { connect } from "react-redux";
+
+const HorizontalBarChart = ({ readings }) => {
   const getBarData = () => {
     return {
       labels: ["PM 1.0", "PM2.5", "PM10"],
@@ -14,7 +16,7 @@ const HorizontalBarChart = ({ reading }) => {
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",
           hoverBorderColor: "rgba(255,99,132,1)",
-          data: [reading.PMOne, reading.PMTwoFive, reading.PMTen],
+          data: [readings[readings.length-1].PMOne, readings[readings.length-1].PMTwoFive, readings[readings.length-1].PMTen],
         },
       ],
     };
@@ -57,4 +59,10 @@ const HorizontalBarChart = ({ reading }) => {
   );
 };
 
-export default React.memo(HorizontalBarChart);
+const mapStateToProps = (state) => {
+  return {
+    readings: state.data.readings,
+  };
+};
+
+export default connect(mapStateToProps)(React.memo(HorizontalBarChart));

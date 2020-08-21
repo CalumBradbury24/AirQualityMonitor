@@ -1,5 +1,6 @@
 import React from "react";
 import "./HistoricalTableReadings.styles.scss";
+import { connect } from "react-redux";
 //Render five latest readings
 const HistoricalPMReadings = (props) => (
   <tr>
@@ -21,12 +22,12 @@ const HistoricalPMReadings = (props) => (
   </tr>
 );
 
-const PastReadingsTable = ({ reading }) => {
+const PastReadingsTable = ({ readings }) => {
   const renderReadings = () => {
-    const length = reading.length;
+    const length = readings.length;
     return (
       <React.Fragment>
-        {reading.slice(length-5, length).map((historicalReadings) => {
+        {readings.slice(length-5, length).map((historicalReadings) => {
           return (
             <HistoricalPMReadings
               data={historicalReadings}
@@ -61,4 +62,10 @@ const PastReadingsTable = ({ reading }) => {
   );
 };
 
-export default React.memo(PastReadingsTable);
+const mapStateToProps = (state) => {
+  return {
+    readings: state.data.readings,
+  };
+};
+
+export default connect(mapStateToProps)(React.memo(PastReadingsTable));

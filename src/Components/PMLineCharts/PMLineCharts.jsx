@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import "./PMLineCharts.styles.scss";
+import { connect } from "react-redux";
 
-const PMLineCharts = ({ readingData }) => {
+const PMLineCharts = ({ readings }) => {
   const [selectGraph, setSelectGraph] = useState("PM1");
 
   const getLineData = (PMvalue) => {
@@ -11,15 +12,15 @@ const PMLineCharts = ({ readingData }) => {
     var counter = 10; 
     for (var i = 0; i < 10; i++) {
       //10 readings to display
-      graphData[i] = readingData[readingData.length - counter][PMvalue];
+      graphData[i] = readings[readings.length - counter][PMvalue];
       labels[i] =
-        readingData[readingData.length - counter].date.substring(8, 10) +
+      readings[readings.length - counter].date.substring(8, 10) +
         "-" +
-        readingData[readingData.length - counter].date.substring(5, 7) +
+        readings[readings.length - counter].date.substring(5, 7) +
         "-" +
-        readingData[readingData.length - counter].date.substring(0, 2) +
+        readings[readings.length - counter].date.substring(0, 2) +
         " @ " +
-        readingData[readingData.length - counter].date.substring(11, 16);
+        readings[readings.length - counter].date.substring(11, 16);
       counter--;
     }
     return {
@@ -196,4 +197,10 @@ const PMLineCharts = ({ readingData }) => {
   );
 };
 
-export default React.memo(PMLineCharts);
+const mapStateToProps = (state) => {
+  return {
+    readings: state.data.readings,
+  };
+};
+
+export default connect(mapStateToProps)(React.memo(PMLineCharts));

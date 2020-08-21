@@ -3,14 +3,15 @@ import "./AverageReadings.styles.scss";
 import { ReactComponent as ParticulateMatterLogo } from "../../assets/particles.svg";
 import { ReactComponent as TempLogo } from "../../assets/temperature.svg";
 import { ReactComponent as HumLogo } from "../../assets/humidity.svg";
+import { connect } from "react-redux";
 
-const AverageReading = ({ data }) => {
+const AverageReading = ({ readings }) => {
  
   const getAverage = (value) => {
-    const length = data.length;
+    const length = readings.length;
     let result = 0;
     for (var x = 0; x < length; x++) {
-      result += data[x][value];
+      result += readings[x][value];
     }
     return result / length;
   };
@@ -69,4 +70,10 @@ const AverageReading = ({ data }) => {
   );
 };
 
-export default React.memo(AverageReading);
+const mapStateToProps = (state) => {
+  return {
+    readings: state.data.readings,
+  };
+};
+
+export default connect(mapStateToProps)(React.memo(AverageReading));

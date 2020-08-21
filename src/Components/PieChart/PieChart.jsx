@@ -2,13 +2,15 @@ import React from "react";
 import { PieChart } from "react-minimal-pie-chart";
 import "./PieChart.styles.scss";
 
-const Pie = ( {reading }) => {
+import { connect } from 'react-redux';
+
+const Pie = ({ readings }) => {
 
   const calculatePercentage = (value) => {
     //sum all, divide individual value by sum and mulitple by 100, (90/208* 100 = 43%)
     //Cast strings as integers in order to sum
     let sum =
-      Number(reading.PMOne) + Number(reading.PMTwoFive) + Number(reading.PMTen);
+      Number(readings[readings.length-1].PMOne) + Number(readings[readings.length-1].PMTwoFive) + Number(readings[readings.length-1].PMTen);
     let answer = (Number(value) / sum) * 100; //Get answer
     return answer.toFixed(2); //Return answer to 2 decimal places
   };
@@ -16,18 +18,18 @@ const Pie = ( {reading }) => {
   const getPieData = () => {
     return [
       {
-        title: " PM1.0 " + calculatePercentage(reading.PMOne) + "%", //Display percentage of particles in pie chart
-        value: reading.PMOne,
+        title: " PM1.0 " + calculatePercentage(readings[readings.length-1].PMOne) + "%", //Display percentage of particles in pie chart
+        value: readings[readings.length-1].PMOne,
         color: "#34dbeb",
       },
       {
-        title: " PM2.5 " + calculatePercentage(reading.PMTwoFive) + "%",
-        value: reading.PMTwoFive,
+        title: " PM2.5 " + calculatePercentage(readings[readings.length-1].PMTwoFive) + "%",
+        value: readings[readings.length-1].PMTwoFive,
         color: "#99eb34",
       },
       {
-        title: "PM10. " + calculatePercentage(reading.PMTen) + "%",
-        value: reading.PMTen,
+        title: "PM10. " + calculatePercentage(readings[readings.length-1].PMTen) + "%",
+        value: readings[readings.length-1].PMTen,
         color: "#eb34e2",
       },
     ];
@@ -61,4 +63,10 @@ const Pie = ( {reading }) => {
   )
 }
 
-export default React.memo(Pie);
+const mapStateToProps = (state) => {
+  return {
+    readings: state.data.readings,
+  };
+};
+
+export default connect(mapStateToProps)(React.memo(Pie));

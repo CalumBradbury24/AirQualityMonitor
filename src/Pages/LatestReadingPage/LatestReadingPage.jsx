@@ -6,51 +6,53 @@ import LocationMap from "../../Components/LocationMap/LocationMap";
 import HorizontalBarChart from "../../Components/HorizontalBarChart/HorizontalBarChart";
 import PMIndexScale from "../../Components/PMIndexScale/PMIndexScale";
 import ReadingChange from "../../Components/ReadingChange/ReadingChange";
-import withData from "../../withData"; //Import HOC for getting data
+import Spinner from '../../Components/spinner/spinner';
 
-const LatestReadingPage = ({data}) => {
-  const latestResult = data[data.length-1];
- 
-  const renderLatestReading = () => {
-    return <LatestReading reading={latestResult} />;
-  };
-  
-  const renderPieChart = () => {
-    return <Pie reading={latestResult} />;
-  };
+import { connect } from "react-redux";
 
-  const renderMap = () => {
-    return <LocationMap reading={latestResult} />;
-  };
-
-  const renderHorizontalBar = () => {
-    return <HorizontalBarChart reading={latestResult} />;
-  };
-
-  const renderVerticalBar = () => {
-    return <PMIndexScale reading={latestResult} />;
-  };
-  
-  const renderChanges = () => {
-    return <ReadingChange reading={data} />;
-  };
-
+const LatestReadingPage = ({ isFetching }) => {
   return (
-    <div className="CurrentReading">
-      <div>{renderLatestReading()}</div>
-      <div className="flex-graphs">
-        <div className="data-container">{renderHorizontalBar()}</div>
-        {
-          <div className="data-container">
-            {renderVerticalBar()}
+     isFetching === true ? (
+      <div className="loading">
+        <p className="loading-message">
+          <strong>
+            Loading data from Heroku back-end server...this may take up to 30
+            seconds
+          </strong>
+        </p>
+        <div className="spinner">
+            <Spinner />
           </div>
-        }{" "}
-        <div className="data-container">{renderPieChart()}</div>
-        <div className="data-container">{renderMap()}</div>
       </div>
-      <div>{renderChanges()}</div>
+    ) : (
+    <div className="CurrentReading">
+      <LatestReading />
+      <div className="flex-graphs">
+      <div className="data-container"><HorizontalBarChart/></div>
+      <div className="data-container"><PMIndexScale/></div>
+      <div className="data-container"><Pie/></div>
+      <div className="data-container"> <LocationMap /></div>
+      </div>
+      <ReadingChange />
     </div>
+    )
   );
 }
 
-export default withData(LatestReadingPage);
+const mapStateToProps = (state) => {
+  return {
+    isFetching: state.data.isFetching,
+  };
+};
+
+export default connect(mapStateToProps)(LatestReadingPage);
+
+
+
+/*
+
+
+
+
+*/
+

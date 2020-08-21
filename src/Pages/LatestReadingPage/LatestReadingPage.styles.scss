@@ -29,3 +29,22 @@
  
 }
 
+.loading {
+  padding-top: 150px;
+}
+.loading-message {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width:700px) {
+  .spinner {
+      padding-top: 100px;
+    }
+}
+

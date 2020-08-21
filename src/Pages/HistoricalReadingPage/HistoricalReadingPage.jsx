@@ -2,29 +2,43 @@ import React from "react";
 import PastReadingsTable from "../../Components/HistoricalTableReadings/HistoricalTableReadings";
 import "./HistoricalReadingPage.styles.scss";
 import PMLineCharts from "../../Components/PMLineCharts/PMLineCharts";
-import withData from "../../withData"; //HOC
-import AverageReadings from '../../Components/AverageReadings/AverageReadings';
+import AverageReadings from "../../Components/AverageReadings/AverageReadings";
+import Spinner from "../../Components/spinner/spinner";
 
-const HistoricalReadingPage = ({ data }) => {
-  const renderHistReadings = () => {
-    return <PastReadingsTable reading={data} />;
-  };
+import { connect } from "react-redux";
 
-  const renderLineCharts = () => {
-    return <PMLineCharts readingData={data} />;
-  };
-
-  const renderAverageReadings = () => (
-    <AverageReadings data={data}/>
-  );
-
-  return (
+const HistoricalReadingPage = ({ isFetching }) => {
+  return isFetching === true ? (
+    <div className="loading">
+      <p className="loading-message">
+        <strong>
+          Loading data from Heroku back-end server...this may take up to 30
+          seconds
+        </strong>
+      </p>
+      <div className="spinner">
+        <Spinner />
+      </div>
+    </div>
+  ) : (
     <div className="Historical-page ">
-      <div className="side-bar">{renderAverageReadings()}</div>
-      <div className="graphs">{renderLineCharts()}</div>
-      <div className="table">{renderHistReadings()}</div>
+      <div className="side-bar">
+        <AverageReadings />
+      </div>
+      <div className="graphs">
+        <PMLineCharts />
+      </div>
+      <div className="table">
+        <PastReadingsTable />
+      </div>
     </div>
   );
 };
 
-export default withData(HistoricalReadingPage);
+const mapStateToProps = (state) => {
+  return {
+    isFetching: state.data.isFetching,
+  };
+};
+
+export default connect(mapStateToProps)(HistoricalReadingPage);

@@ -46,10 +46,9 @@ class LocationMap extends Component {
     });
 
   render() {
-    const { reading } = this.props;
     return (
       <div id="map">
-        <div className='map-title'><strong>Geographical location of sensor module with ID: {reading.SensorID} </strong></div>
+        <div className='map-title'><strong>Geographical location of sensor module with ID: 1 </strong></div>
         <div className = 'height'
           id="google-map"
           ref={this.googleMapRef}
