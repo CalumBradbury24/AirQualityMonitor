@@ -3,9 +3,8 @@ import "./Logo.styles.scss";
 import Logo from '../../assets/Logo.jpg'
 
 const AirLogo = () => (
-  <span className= ''>
-    {" "}
-    <img className="logo" src={Logo} alt="Logo" />
+  <span>
+    <img className='logo' data-test='logo-test' src={Logo} alt="Logo" />
   </span>
 );
 

@@ -5,6 +5,7 @@
   grid-template-rows: 1fr 0.76fr;
   gap: 1px 1px;
   grid-template-areas: "side-bar graphs" "side-bar table";
+  padding-top: 70px;
 }
 
 .side-bar {

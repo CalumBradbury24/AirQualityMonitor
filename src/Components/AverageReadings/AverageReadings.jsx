@@ -13,7 +13,7 @@ const AverageReading = ({ readings }) => {
     for (var x = 0; x < length; x++) {
       result += readings[x][value];
     }
-    return result / length;
+    return (result / length).toFixed(2);
   };
 
   return (

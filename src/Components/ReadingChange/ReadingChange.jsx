@@ -49,6 +49,7 @@ const ReadingChange = ({ readings }) => {
 
   const result = (var1, var2) => {
     let res = var1 - var2;
+    console.log(var1, var2)
     return res > 0 ? "+" + res : res;
   };
 

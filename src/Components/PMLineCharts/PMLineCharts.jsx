@@ -9,25 +9,22 @@ const PMLineCharts = ({ readings }) => {
   const getLineData = (PMvalue) => {
     var graphData = []; 
     var labels = []; //Labels corresponding to graph data
-    var counter = 10; 
-    for (var i = 0; i < 10; i++) {
-      //10 readings to display
-      graphData[i] = readings[readings.length - counter][PMvalue];
+    for (var i = 0; i < readings.length; i++) {
+      graphData[i] = readings[i][PMvalue];
       labels[i] =
-      readings[readings.length - counter].date.substring(8, 10) +
+      readings[i].date.substring(8, 10) +
         "-" +
-        readings[readings.length - counter].date.substring(5, 7) +
+        readings[i].date.substring(5, 7) +
         "-" +
-        readings[readings.length - counter].date.substring(0, 2) +
+        readings[i].date.substring(0, 2) +
         " @ " +
-        readings[readings.length - counter].date.substring(11, 16);
-      counter--;
+        readings[i].date.substring(11, 16);
     }
     return {
       labels: labels,
       datasets: [
         {
-          backgroundColor: "rgba(75,192,192,0.4)",
+          backgroundColor: "rgba(0,0,192,0.4)",
           borderColor: "blue",
           borderWidth: 1,
           data: graphData,

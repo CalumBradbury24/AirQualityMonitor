@@ -4,6 +4,7 @@
   flex-direction: column;
   margin: 10px auto 0;
   padding-bottom: 20px;
+  padding-top: 60px;
 }
 .flex-graphs {
   display: flex;
@@ -25,6 +26,7 @@
 @media screen and (max-width:1500px) {
  .data-container{
   width: 100vw;
+  height: auto;
  }
  
 }
