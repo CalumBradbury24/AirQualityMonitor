@@ -14,11 +14,6 @@ class LocationMap extends Component {
     googleMapScript.addEventListener("load", () => {
       this.googleMap = this.createGoogleMap();
       this.marker = this.createMarker();
-/*
-      window.google.maps.event.addListener(this.marker, 'mouseover', () => {
-       this.setState({mouseOverMarker: true});
-       console.log(this.state.mouseOverMarker);
-    })*/
     
     });
   }
@@ -52,7 +47,6 @@ class LocationMap extends Component {
         <div className = 'height'
           id="google-map"
           ref={this.googleMapRef}
-        //  style={{  height: "" }}
         />
           
       </div>
