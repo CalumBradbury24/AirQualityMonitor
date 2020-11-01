@@ -13,9 +13,9 @@ const PMLineCharts = ({ readings }) => {
       graphData[i] = readings[i][PMvalue];
       labels[i] =
       readings[i].date.substring(8, 10) +
-        "-" +
+        "/" +
         readings[i].date.substring(5, 7) +
-        "-" +
+        "/" +
         readings[i].date.substring(0, 2) +
         " @ " +
         readings[i].date.substring(11, 16);

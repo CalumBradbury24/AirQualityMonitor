@@ -23,8 +23,13 @@
 .graphs { 
   grid-area: graphs; 
   background-color: whitesmoke;
-  overflow: hidden;
+  overflow-y: scroll;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  height: 100%;
+}
+
+.graphs::-webkit-scrollbar {
+  display: none;
 }
 
 .table { 
@@ -33,6 +38,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  height: 100%;
  }
 
 

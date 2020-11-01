@@ -1,48 +1,45 @@
-.graph-selector {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
-  }
-  .line-container{
-   padding-bottom: 25px;
-  }
-  .graphs-title{
-    width:100%;
-    display: flex;
-    justify-content: left;
-    margin-top: 8px;
-    margin-left: 25px;
-  }
-  .hist-graph-container {
-    position: relative;
-    margin: auto;
-    width: 700px;
-    padding-top: 25px;
-  }
- 
-  .on-hover {
-    cursor: pointer;
-    margin-bottom: 0px;
-  }
   
-  .blue {
-    color: blue;
+.graph-selector {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+.line-container{
+ padding-bottom: 25px;
+}
+.graphs-title{
+  width:100%;
+  display: flex;
+  justify-content: left;
+  margin-top: 8px;
+  margin-left: 25px;
+}
+.hist-graph-container {
+  position: relative;
+  margin: auto;
+  width: 700px;
+  padding-top: 25px;
+}
+
+.on-hover {
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.blue {
+  color: blue;
+}
+.default {
+  color: grey;
+}
+
+@media screen and (max-width: 720px) {
+  .hist-graph-container {
+    width: 112vw;
+    padding-top: 0px;
+    padding-left: 25px;
   }
-  .default {
-    color: grey;
+  .on-hover {
+    margin-top: 0px;
   }
-  @media screen and (max-width: 930px) {
-    .hist-graph-container {
-      width: 550px;
-    }
-  }
-  @media screen and (max-width: 780px) {
-    .hist-graph-container {
-      width: 450px;
-    }
-  }
-  @media screen and (max-width: 720px) {
-    .hist-graph-container {
-      width: 70vw;
-    }
-  }
+}
