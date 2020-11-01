@@ -6,6 +6,8 @@
   gap: 1px 1px;
   grid-template-areas: "side-bar graphs" "side-bar table";
   padding-top: 70px;
+  height: 92vh;
+  overflow-y: hidden;
 }
 
 .side-bar {

@@ -8,9 +8,9 @@ nav.responsive-toolbar {
   top: 0;
   z-index: 500;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
   span:last-of-type { //push logo to end of div
     margin-left: auto;
-   
   }
   ul {
   // background-color: rgba(43, 43, 43, 0.986);
@@ -87,14 +87,14 @@ nav.responsive-toolbar {
 
       a {
         background-color: whitesmoke;
-        flex-direction: row;
-        justify-content: space-between;
         margin-left: 20px;
         margin-right: 16px;
         width: 100%;
         padding-left: 0;
         padding-right: 0;
         font-size: 20px;
+        display: flex;
+        justify-content: center;
       }
     }
   }

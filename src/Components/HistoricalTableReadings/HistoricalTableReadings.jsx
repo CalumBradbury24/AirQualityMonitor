@@ -8,8 +8,8 @@ const HistoricalPMReadings = (props) => (
     <td>{props.data.PMOne}</td>
     <td>{props.data.PMTwoFive}</td>
     <td>{props.data.PMTen}</td>
-    <td>{props.data.TemperatureDHT11}</td>
-    <td>{props.data.HumidityDHT11}</td>
+    <td>{props.data.TemperatureDHT11.toFixed(2)}</td>
+    <td>{props.data.HumidityDHT11.toFixed(2)}</td>
     {/* substring just gets the date part of the time string (excludes the timezone)*/}
     <td>
       {props.data.date.substring(8, 10)}

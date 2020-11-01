@@ -58,7 +58,7 @@ const LatestReading = ({ readings }) => {
         <div className="text">
           <h4 className="title">Temperature</h4>
           <span className="reading">
-            {readings[readings.length - 1].TemperatureDHT11 + "\u00b0C"}
+            {readings[readings.length - 1].TemperatureDHT11.toFixed(2) + "\u00b0C"}
           </span>
         </div>
       </div>
@@ -67,7 +67,7 @@ const LatestReading = ({ readings }) => {
         <div className="text">
           <h4 className="title">Humidity</h4>
           <span className="reading">
-            {readings[readings.length - 1].HumidityDHT11 + "%"}
+            {readings[readings.length - 1].HumidityDHT11.toFixed(2) + "%"}
           </span>
         </div>
       </div>
