@@ -1,7 +1,11 @@
 nav.responsive-toolbar {
   height: 60px;
   width: 100%;
- // background-color: rgba(107, 107, 107, 0.986);
+  background: linear-gradient(
+    45deg,
+    #8e9eab,
+    #ffffff
+  );
   position: fixed;
   display: flex;
   justify-content: flex-start;
@@ -30,15 +34,18 @@ nav.responsive-toolbar {
     }
 
     a {
+      margin: 0;
       color: black;
       text-decoration: none;
       list-style-type: none;
       padding: 10px 10px;
       font-size: 30px;
       cursor: pointer;
+      
     }
     a:hover{
       color: rgb(255, 196, 0);
+      
     }
 
   }
@@ -67,7 +74,7 @@ nav.responsive-toolbar {
       height: 60px;
       width: 100%;
       position: fixed;
-      top: -240px; //slide from -240 -> 0
+      top: -200px; //slide from -240 -> 0
       align-items: center;
       flex-direction: column;
 
@@ -77,6 +84,7 @@ nav.responsive-toolbar {
         //when active bring in navbar from the top
         top: 60px;
         height: 180px;
+        
       }
       figure {
         position: fixed;
@@ -86,9 +94,11 @@ nav.responsive-toolbar {
       }
 
       a {
-        background-color: whitesmoke;
-        margin-left: 20px;
-        margin-right: 16px;
+        background: linear-gradient(
+          45deg,
+          #8e9eab,
+          white
+        );
         width: 100%;
         padding-left: 0;
         padding-right: 0;

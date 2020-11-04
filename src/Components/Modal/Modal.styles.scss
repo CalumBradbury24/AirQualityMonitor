@@ -1,0 +1,69 @@
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.89);
+  z-index: 100;
+  animation-name: modalFade;
+  animation-duration: 0.75s;
+
+  .modal-container {
+    z-index: 100;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: 60vh;
+    width: 50vw;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 25px;
+
+    .modal-title-button {
+      display: flex;
+      justify-content: space-between;
+
+
+      .modal-title{
+        margin: 0;
+        padding: 0;
+      }
+
+      .modal-button{
+        cursor: pointer;
+        border: none;
+      
+        outline: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 35px;
+        
+        svg{
+          background-color: whitesmoke;
+        }
+        svg:hover{
+          background-color: orange;
+          border-radius: 5px;
+        }
+      }
+
+
+
+      
+
+
+    }
+  }
+
+  @keyframes modalFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

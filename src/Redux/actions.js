@@ -1,5 +1,6 @@
 import DataActionTypes from "./types";
 import axios from "axios";
+const apiUrl = process.env.REACT_APP_API;
 
 export const fetchDataStart = () => ({
   type: DataActionTypes.FETCH_DATA_PENDING, //Switches reducers isFetching state
@@ -19,7 +20,7 @@ export const fetchData = () => (dispatch) => {
   dispatch(fetchDataStart());
   try {
     axios
-      .get("https://mysterious-sierra-11255.herokuapp.com/")
+      .get(apiUrl)
       .then(({ data }) => {
         dispatch(fetchDataSuccess(data));
       });

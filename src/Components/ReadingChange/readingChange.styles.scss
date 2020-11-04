@@ -1,28 +1,46 @@
-.changes-container{
-    border: solid 5px  lavender; /*Create individual borders around readings */
-    border-radius: 10px; /*Rounded corners*/ 
-    width: auto;
-}
+.changes-container {
+  border: solid 6px #19547b;
+  border-radius: 10px; /*Rounded corners*/
+  width: auto;
 
-.changes{
+  .changes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 5px;
     margin-right: 5px;
-}
+  }
 
-.change{
+  .change {
     display: flex;
     justify-content: center;
-    
-}
-.changes-title {
+  }
+  
+  .changes-title {
     display: flex;
     justify-content: center;
     padding-top: 2px;
     padding-bottom: 2px;
-    background-color:  lavender;
+    background: linear-gradient(45deg, #19547b, #ffd89b);
+    border-top-right-radius: 3px; /*Rounded corners*/
     margin: 0;
     color: black;
   }
+}
+
+@media screen and (max-width: 700px) {
+  .changes-title {
+    font-size: 14px;
+  }
+  .changes {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .changes-title {
+    font-size: 14px;
+  }
+  .changes {
+    font-size: 11px;
+  }
+}

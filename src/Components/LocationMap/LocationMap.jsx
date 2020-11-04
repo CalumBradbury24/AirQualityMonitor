@@ -16,8 +16,8 @@ class LocationMap extends Component {
       this.marker = this.createMarker();
     
     });
-  }
 
+  }
   initMap = () => {
     this.createGoogleMap();
   };
@@ -54,4 +54,4 @@ class LocationMap extends Component {
   }
 }
 
-export default LocationMap;
+export default React.memo(LocationMap);

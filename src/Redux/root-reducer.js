@@ -1,10 +1,11 @@
 //Represents overall reducer (combination of all reducers)
 import { combineReducers } from 'redux';
 import dataReducer from './reducer';
-//import storage from 'redux-persist/lib/storage';//Use local storage as default storage
+import modalReducer from './modal/modal-reducer';
 
 const rootReducer = combineReducers({
    data: dataReducer,
+   modal: modalReducer
 });
 
 export default rootReducer;

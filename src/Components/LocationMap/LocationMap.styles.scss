@@ -1,23 +1,24 @@
 .map-title{
-   background-color: lavender;
+  background: linear-gradient(
+    45deg,
+    #19547b,
+    #ffd89b
+  );
     display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        
+        padding-top: 5px;
+        padding-bottom: 5px;   
+        border-top-right-radius: 3px; /*Rounded corners*/   
 }
+
 .height{
     height: 42.35vh;
 }
 
-
 @media screen and (max-width: 500px) {
     .map-title {
         font-size:12px;
-      }
-      .height {
-        height: 42.8vh;
       }
   }
 

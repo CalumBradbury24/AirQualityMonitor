@@ -5,30 +5,27 @@
   margin: 10px auto 0;
   padding-bottom: 20px;
   padding-top: 60px;
-}
-.flex-graphs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-.data-container {
-  border: solid 5px lavender; /*Create individual borders around readings */
-  border-radius: 10px; /*Rounded corners*/
-  width: 46.3vw; /*standard width for each container*/
-  height: 45vh;
-  justify-content: center;
-  margin-bottom: 10px;
-  background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-}
+  .flex-graphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-@media screen and (max-width:1500px) {
- .data-container{
-  width: 100vw;
-  height: auto;
- }
- 
+  .data-container {
+    border: solid 6px #19547b;
+    border-radius: 10px; /*Rounded corners*/
+    width: 46.3vw; /*standard width for each container*/
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+@media screen and (max-width: 1672px) {
+  .data-container {
+    width: 100vw !important;
+  }
 }
 
 .loading {
@@ -44,9 +41,8 @@
   justify-content: center;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .spinner {
-      padding-top: 100px;
-    }
+    padding-top: 100px;
+  }
 }
-

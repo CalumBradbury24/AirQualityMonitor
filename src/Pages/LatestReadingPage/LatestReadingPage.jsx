@@ -7,10 +7,10 @@ import HorizontalBarChart from "../../Components/HorizontalBarChart/HorizontalBa
 import PMIndexScale from "../../Components/PMIndexScale/PMIndexScale";
 import ReadingChange from "../../Components/ReadingChange/ReadingChange";
 import Spinner from '../../Components/spinner/spinner';
-
+import Modal from '../../Components/Modal/Modal';
 import { connect } from "react-redux";
 
-const LatestReadingPage = ({ isFetching }) => {
+const LatestReadingPage = ({ isFetching, isModalActive }) => {
   return (
      isFetching === true ? (
       <div className="loading">
@@ -34,6 +34,7 @@ const LatestReadingPage = ({ isFetching }) => {
       <div className="data-container"> <LocationMap /></div>
       </div>
       <ReadingChange />
+      {isModalActive === true ? <Modal /> : null}
     </div>
     )
   );
@@ -42,17 +43,8 @@ const LatestReadingPage = ({ isFetching }) => {
 const mapStateToProps = (state) => {
   return {
     isFetching: state.data.isFetching,
+    isModalActive: state.modal.modalOpen
   };
 };
 
 export default connect(mapStateToProps)(LatestReadingPage);
-
-
-
-/*
-
-
-
-
-*/
-

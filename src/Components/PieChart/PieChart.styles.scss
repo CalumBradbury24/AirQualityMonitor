@@ -1,7 +1,7 @@
 .content{
     display: flex;
     flex-direction: column;
-    height: -webkit-fill-available;
+    height: 100%
 }
 
 .pie-wrapper{
@@ -12,7 +12,4 @@
     
 }
 
-.pie{
-    height: 30vh;
-}
 

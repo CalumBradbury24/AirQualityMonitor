@@ -2,11 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-.logo-images{
-  height: 100px;
-  width: 100px;
-  padding-left: 5px;
-}
+
+  .logo-images {
+    height: 100px;
+    width: 100px;
+    padding-left: 5px;
+  }
+
   .reading-container {
     display: flex;
     flex-wrap: nowrap;
@@ -14,31 +16,28 @@
     margin-bottom: 10px;
     width: 13vw; /*standard width for each container*/
     background-color: white;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-right: 2px;
   }
-  .text{
-   display: flex;
+
+  .text {
+    display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
     color: black;
   }
-  
+
   .title {
     font-size: 1.1em;
     margin-bottom: 0px;
     padding-left: 5px;
-    
   }
+
   .reading {
     font-size: 1.2em;
     font-weight: bold;
-  }
-  .concentration {
-    font-size: 0.8em;
-    display: flex;
-    justify-content: center;
   }
 
   .reading-container:hover {
@@ -46,36 +45,16 @@
     transform: scale(1.04);
     transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
-  
 
-.red-text{
- color: red;
-}
-
-.orange-text{
-  color: orange;
-}
-
-.green-text{
-  color: green;
-}
-
-@media screen and (max-width: 1250px) {
- 
-  .title {
-    font-size: 14px;
+  @media screen and (max-width: 1250px) {
+    .title {
+      font-size: 14px;
+    }
+    .reading {
+      font-size: 16px;
+      padding: 0.25vh; /*pad content in border*/
+    }
   }
-  .reading {
-    font-size: 16px;
-    padding: 0.25vh; /*pad content in border*/
-  }
-  .concentration {
-    font-size: 0.7em;
-  }
-
-}
-
-
 
   @media screen and (max-width: 1120px) {
     .reading-container {
@@ -88,32 +67,21 @@
       font-size: 16px;
       padding: 0.25vh; /*pad content in border*/
     }
-    .concentration {
-      font-size: 0.7em;
-    }
-
   }
   @media screen and (max-width: 411px) {
     .reading-container {
       width: 140px;
-      
     }
-   
+
     .reading {
       font-size: 16px;
       padding: 0.25vh; /*pad content in border*/
     }
-    .concentration {
-      font-size: 0.6em;
-    }
-
   }
-  
-  
 }
 
 @media screen and (max-width: 501px) {
-  .readings-container{
+  .readings-container {
     justify-content: space-evenly;
   }
 }

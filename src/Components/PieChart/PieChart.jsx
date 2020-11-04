@@ -41,7 +41,7 @@ const Pie = ({ readings }) => {
           <strong>PM concentration per cubic meter of air (%)</strong>
         </div>
         <div className="pie-wrapper">
-          <div className="pie">
+          <div>
             <PieChart
               data={getPieData()}
               lineWidth={30}

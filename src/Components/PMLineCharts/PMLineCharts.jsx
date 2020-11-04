@@ -86,6 +86,8 @@ const PMLineCharts = ({ readings }) => {
                       ticks: {
                         maxRotation: 45,
                         minRotation: 45,
+                        autoSkip: true,
+                        maxTicksLimit: 20
                       },
                     },
                   ],
