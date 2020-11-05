@@ -1,3 +1,12 @@
 .custom-chart-container{
     padding-top: 25px;
+ 
 }
+
+@media screen and (max-width: 501px) {
+    .custom-chart-container{
+        padding-top: 10px;
+        width: 500px;
+        padding-right: 10px;
+    }
+  }

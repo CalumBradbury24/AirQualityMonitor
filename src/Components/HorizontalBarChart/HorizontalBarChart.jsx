@@ -11,7 +11,7 @@ const HorizontalBarChart = ({ readings }) => {
       datasets: [
         {
           label: false,
-          backgroundColor: ["#34dbeb", "#99eb34", "#eb34e2"],
+          backgroundColor: ["#0316a4", "#ff9c02", "#eb34e2"],
           borderColor: "whitesmoke",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",

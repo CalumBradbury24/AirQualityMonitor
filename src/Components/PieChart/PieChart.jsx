@@ -20,12 +20,12 @@ const Pie = ({ readings }) => {
       {
         title: " PM1.0 " + calculatePercentage(readings[readings.length-1].PMOne) + "%", //Display percentage of particles in pie chart
         value: readings[readings.length-1].PMOne,
-        color: "#34dbeb",
+        color: "#0316a4",
       },
       {
         title: " PM2.5 " + calculatePercentage(readings[readings.length-1].PMTwoFive) + "%",
         value: readings[readings.length-1].PMTwoFive,
-        color: "#99eb34",
+        color: "#ff9c02",
       },
       {
         title: "PM10. " + calculatePercentage(readings[readings.length-1].PMTen) + "%",

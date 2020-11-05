@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import { connect } from "react-redux";
-import './CustomChart.styles.scss';
+import "./CustomChart.styles.scss";
 
 const CustomChart = ({ readings, modalOption }) => {
   const getLineData = () => {
@@ -27,7 +27,7 @@ const CustomChart = ({ readings, modalOption }) => {
       datasets: [
         {
           fill: true,
-          pointBackgroundColor: '#a00606',
+          pointBackgroundColor: "#a00606",
           pointHoverRadius: 7,
           backgroundColor: "#98eaff",
           borderColor: "#a00606",
@@ -72,53 +72,52 @@ const CustomChart = ({ readings, modalOption }) => {
         max = 100;
     }
     return max;
-  }
+  };
 
   return (
-    <div className='custom-chart-container'>
-      <Line
-        data={getLineData}
-        options={{
-          responsive: true,
-          aspectRatio: 1,
-          legend: {
-            display: false,
-          },
-          title: {
-            display: false,
-          },
-          scales: {
-            xAxes: [
-              {
-                display: true,
-                scaleLabel: {
+    <div className="custom-chart-container">
+        <Line
+          data={getLineData}
+          options={{
+            responsive: true,
+            aspectRatio: 1,
+            legend: {
+              display: false,
+            },
+            title: {
+              display: false,
+            },
+            scales: {
+              xAxes: [
+                {
                   display: true,
-                  labelString: "Date (DD/MM/YY)",
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Date (DD/MM/YY)",
+                  },
+                  ticks: {
+                    maxRotation: 45,
+                    minRotation: 45,
+                    autoSkip: true,
+                    maxTicksLimit: 5,
+                  },
                 },
-                ticks: {
-                  maxRotation: 45,
-                  minRotation: 45,
-                  autoSkip: true,
-                  maxTicksLimit: 15
-                
+              ],
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                    max: getMaxYAxis(),
+                  },
+                  scaleLabel: {
+                    display: true,
+                    labelString: getYAxisLabel(),
+                  },
                 },
-              },
-            ],
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                  max: getMaxYAxis() 
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: getYAxisLabel(),
-                },
-              },
-            ],
-          },
-        }}
-      />
+              ],
+            },
+          }}
+        />
     </div>
   );
 };
