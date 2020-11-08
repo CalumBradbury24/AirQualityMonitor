@@ -20,7 +20,7 @@ export const fetchData = () => (dispatch) => {
   dispatch(fetchDataStart());
   try {
     axios
-      .get(apiUrl)
+      .get("https://mysterious-sierra-11255.herokuapp.com")
       .then(({ data }) => {
         dispatch(fetchDataSuccess(data));
       });
