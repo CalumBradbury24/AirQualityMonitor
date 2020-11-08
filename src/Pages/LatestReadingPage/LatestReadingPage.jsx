@@ -16,8 +16,8 @@ const LatestReadingPage = ({ isFetching, isModalActive }) => {
       <div className="loading">
         <p className="loading-message">
           <strong>
-            Loading data from Heroku back-end server...this may take up to 30
-            seconds
+            Waking Heroku back-end server...this may take up to 30
+            seconds..
           </strong>
         </p>
         <div className="spinner">

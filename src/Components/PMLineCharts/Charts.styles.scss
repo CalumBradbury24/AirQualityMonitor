@@ -1,0 +1,18 @@
+.line-container {
+  padding-bottom: 25px;
+}
+
+.hist-graph-container {
+  position: relative;
+  margin: auto;
+  width: 700px;
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 720px) {
+  .hist-graph-container {
+    width: 112vw;
+    padding-top: 0px;
+    padding-left: 25px;
+  }
+}

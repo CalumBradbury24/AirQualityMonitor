@@ -4,21 +4,13 @@
   justify-content: space-evenly;
   margin-top: 5px;
 }
-.line-container{
- padding-bottom: 25px;
-}
+
 .graphs-title{
   width:100%;
   display: flex;
   justify-content: left;
   margin-top: 8px;
   margin-left: 25px;
-}
-.hist-graph-container {
-  position: relative;
-  margin: auto;
-  width: 700px;
-  padding-top: 25px;
 }
 
 .on-hover {
@@ -34,11 +26,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  .hist-graph-container {
-    width: 112vw;
-    padding-top: 0px;
-    padding-left: 25px;
-  }
   .on-hover {
     margin-top: 0px;
   }
